@@ -1,0 +1,11 @@
+- include_vars: "{{ ansible_distribution }}.yml"
+  tags: always
+
+- block:
+
+  - import_tasks: ansible_setup.yml
+
+  - import_tasks: system_setup/locale.yml
+
+  - import_tasks: desktop/minimal/install.yml
+    when: desktop == 'minimal'

@@ -1,0 +1,4 @@
+- name: ansible setup
+  package:
+    name: ansible
+    state: latest

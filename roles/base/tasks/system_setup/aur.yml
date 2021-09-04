@@ -1,0 +1,16 @@
+- name: Install base-devel
+  package:
+    name: base-devel
+
+- name: Install git
+  package:
+    name: git
+
+- name: Checkout paru
+  ansible.builtin.git:
+    repo: 'git@github.com:Morganamilo/paru.git'
+    dest: /tmp/paru
+
+- name: Install paru
+  command: makepkg --syncdeps --install
+  chdir: /tmp/paru
