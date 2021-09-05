@@ -3,7 +3,7 @@
     name: 
       - base-devel
       - git
-      - ssh
+      - openssh
     state: latest
 
 - name: system-setup | checkout paru (AUR helper)
