@@ -1,6 +1,6 @@
 # https://github.com/kewlfft/ansible-aur
 
-- name: system-setup | install base-devel, git, ssh
+- name: system-setup | install base-devel, git
   package:
     name: 
       - base-devel
@@ -20,29 +20,27 @@
     create: yes
     validate: 'visudo -cf %s'
 
-- name: system-setup | aur | install paru
+#- name: system-setup | aur | install paru
+#  become: yes
+#  become_user: aur_builder
+#  command: 
+
+- name: system-setup | aur | checkout paru (AUR helper)
+  ansible.builtin.git:
+    repo: 'https://aur.archlinux.org/paru.git'
+    dest: /tmp/paru
+
+- name: system-setup | aur | change ownership of paru repository
+  file:
+    path: /tmp/paru
+    state: directory
+    owner: aur_builder
+    group: aur_builder
+    recurse: yes
+
+- name: system-setup | aur | install paru (AUR helper)
   become: yes
   become_user: aur_builder
-  kewlfft.aur.aur:
-    name: paru
-    use: makepkg
-    state: present
-
-#- name: system-setup | checkout paru (AUR helper)
-#  ansible.builtin.git:
-#    repo: 'https://aur.archlinux.org/paru.git'
-#    dest: /tmp/paru
-
-#- name: system-setup | aur | change ownership of paru repository
-#  file:
-#    path: /tmp/paru
-#    state: directory
-#    owner: "{{ config_username }}"
-#    group: "{{ config_username }}"
-#    recurse: yes
-
-#- name: system-setup | install paru (AUR helper)
-#  become_user: "{{ config_username }}"
-#  command: makepkg --syncdeps --install --noconfirm
-#  args:
-#    chdir: /tmp/paru
+  command: makepkg --syncdeps --install --noconfirm
+  args:
+    chdir: /tmp/paru
