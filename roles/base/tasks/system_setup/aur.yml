@@ -1,4 +1,4 @@
-- name: Install base-devel
+- name: system-setup | install base-devel
   package:
     name: base-devel
 
@@ -6,11 +6,11 @@
   package:
     name: git
 
-- name: Checkout paru
+- name: system-setup | checkout paru (AUR helper)
   ansible.builtin.git:
     repo: 'git@github.com:Morganamilo/paru.git'
     dest: /tmp/paru
 
-- name: Install paru
+- name: system-setup | install paru (AUR helper)
   command: makepkg --syncdeps --install
   chdir: /tmp/paru

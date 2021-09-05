@@ -11,19 +11,5 @@
     name: "{{ config_system_language }}"
     state: present
 
-#- name: system-setup | get current locale and language configuration
-#  command: localectl status
-#  register: locale_status
-#  changed_when: false
-
-#- name: system-setup | parse 'LANG' from current locale and language configuration
-#  set_fact:
-#    locale_lang: "{{ locale_status.stdout | regex_search('LANG=([^\n]+)', '\\1') | first }}"
-
-#- name: system-setup | parse 'LC_MESSAGES' from current locale and language configuration
-#  set_fact:
-#    locale_language: "{{ locale_status.stdout | regex_search('LC_MESSAGES=([^\n]+)', '\\1') | default([locale_lang], true) | first }}"
-
 - name: Configure locale to '{{ config_system_locale }}' and language to '{{ config_system_language }}'
   command: localectl set-locale LANG={{ config_system_locale }} LC_MESSAGES={{ config_system_language }}
-#  changed_when: locale_lang != config_system_locale or locale_language != config_system_language

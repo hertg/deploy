@@ -6,6 +6,9 @@
   - import_tasks: ansible_setup.yml
 
   - import_tasks: system_setup/locale.yml
+  
+  - import_tasks: system_setup/aur.yml
+    when: ansible_distribution == 'Archlinux'
 
   - import_tasks: desktop/minimal/install.yml
     when: desktop == 'minimal'

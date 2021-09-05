@@ -1,0 +1,10 @@
+- name: system-setup | graphics | install nvidia proprietary drivers
+  package:
+    name:
+      - nvidia
+      - nvidia-lts
+      - nvidia-utils
+  when:
+    - ansible_distribution == "Archlinux"
+    - gpu is defined
+    - gpu == "nvidia"

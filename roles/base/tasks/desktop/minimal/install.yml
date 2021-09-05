@@ -7,4 +7,5 @@
       - xbindkeys
       - xclip
       - xsel
+      - xterm
     state: latest
