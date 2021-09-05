@@ -7,7 +7,7 @@
 
 - name: system-setup | checkout paru (AUR helper)
   ansible.builtin.git:
-    repo: 'https://github.com/Morganamilo/paru.git'
+    repo: 'https://aur.archlinux.org/paru.git'
     dest: /tmp/paru
 
 - name: system-setup | aur | change ownership of paru repository
