@@ -11,6 +11,7 @@
     dest: /tmp/paru
 
 - name: system-setup | install paru (AUR helper)
+  become: "{{ config_username }}"
   command: makepkg --syncdeps --install
   args:
     chdir: /tmp/paru

@@ -1,0 +1,36 @@
+#- name: user | root
+#  user:
+#    name: root
+#    password_lock: yes
+
+- name: user | install sudo
+  package:
+    name: sudo
+    state: latest
+
+- name: user | wheel group
+  group:
+    name: wheel
+    state: present
+
+- name: user | allow sudo for wheel group
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) ALL'
+    validate: 'visudo -cf %s'
+
+- name: user | create group
+  group:
+    name: "{{ config_username }}"
+    state: present
+
+- name: user | create user
+  user:
+    name: "{{ config_username }}"
+    groups: 
+      - "{{ config_username }}"
+      - wheel
+    state: present
+    create_home: yes
