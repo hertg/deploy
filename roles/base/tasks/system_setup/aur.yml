@@ -1,10 +1,10 @@
-- name: system-setup | install base-devel
+- name: system-setup | install base-devel, git, ssh
   package:
-    name: base-devel
-
-- name: Install git
-  package:
-    name: git
+    name: 
+      - base-devel
+      - git
+      - ssh
+    state: latest
 
 - name: system-setup | checkout paru (AUR helper)
   ansible.builtin.git:
@@ -14,5 +14,4 @@
 - name: system-setup | install paru (AUR helper)
   command: makepkg --syncdeps --install
   args:
-    creates: paru
     chdir: /tmp/paru
