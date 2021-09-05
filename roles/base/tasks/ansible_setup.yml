@@ -2,3 +2,6 @@
   package:
     name: ansible
     state: latest
+
+- name: ansible requirements
+  command: ansible-galaxy collection install -r requirements.yml
