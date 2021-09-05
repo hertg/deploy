@@ -10,6 +10,7 @@
   ansible.builtin.git:
     repo: 'git@github.com:Morganamilo/paru.git'
     dest: /tmp/paru
+    accept_hostkey: true
 
 - name: system-setup | install paru (AUR helper)
   command: makepkg --syncdeps --install
