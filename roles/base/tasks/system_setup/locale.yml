@@ -1,15 +1,13 @@
-- name: add en_US
-  #tags: locale,system,setup
+- name: system-setup | add en_US
   locale_gen:
     name: en_US.UTF-8
     state: present
 
-- name: add de_CH
-  #tags: locale,system,setup
+- name: system-setup | add de_CH
   locale_gen:
     name: de_CH.UTF-8
     state: present
 
-- name: set en_US as lang
-  command: localectl set-locate LANG=en_US.UTF-8
+- name: system-setup | set LANG to en_US
+  command: localectl set-locale LANG=en_US.UTF-8
   when: locale.changed
