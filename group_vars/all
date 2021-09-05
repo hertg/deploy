@@ -1,4 +1,5 @@
 ---
 config_system_locale: 'de_CH.UTF-8'
 config_system_language: 'en_US.UTF-8'
+config_system_keymap: 'de_CH-latin1'
 config_username: 'michael'

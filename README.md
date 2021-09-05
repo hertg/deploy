@@ -6,8 +6,9 @@ This will automatically run the playbook called `local.yml` in the given reposit
 sudo ansible-pull -U https://github.com/hertg/deploy
 ```
 
-<summary>Installation based on [Arch Installation Guide](https://wiki.archlinux.org/title/installation_guide#Installation)</summary>
 <details>
+<summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
+ 
 ```sh
 loadkeys de_CH-latin1 # load swiss keymap
 iwctl # connect to wifi: https://wiki.archlinux.org/title/Iwd#iwctl
@@ -91,4 +92,5 @@ swapoff -a
 # Reboot
 reboot
 ```
+
 </details>

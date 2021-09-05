@@ -1,15 +1,18 @@
 # https://wiki.archlinux.org/title/locale
 # https://serverfault.com/a/981742
 
-- name: system-setup | add locale
+- name: system-setup | locale | add locale
   locale_gen:
     name: "{{ config_system_locale }}"
     state: present
 
-- name: system-setup | add language
+- name: system-setup | locale | add language
   locale_gen:
     name: "{{ config_system_language }}"
     state: present
 
-- name: Configure locale to '{{ config_system_locale }}' and language to '{{ config_system_language }}'
+- name: system-setup | locale | configure locale to '{{ config_system_locale }}' and language to '{{ config_system_language }}'
   command: localectl set-locale LANG={{ config_system_locale }} LC_MESSAGES={{ config_system_language }}
+
+- name: system-setup | locale | configure keymap to '{{ config_system_keymap }}'
+  command: localectl set-keymap {{ config_system_keymap }}

@@ -1,7 +1,7 @@
-- name: ansible setup
+- name: ansible setup | update ansible to latest version
   package:
     name: ansible
     state: latest
 
-- name: ansible requirements
+- name: ansible setup | install galaxy requirements
   command: ansible-galaxy collection install -r requirements.yml
