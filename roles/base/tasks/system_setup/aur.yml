@@ -13,4 +13,6 @@
 
 - name: system-setup | install paru (AUR helper)
   command: makepkg --syncdeps --install
-  chdir: /tmp/paru
+  args:
+    creates: paru
+    chdir: /tmp/paru
