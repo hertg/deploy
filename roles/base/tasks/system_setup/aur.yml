@@ -11,11 +11,12 @@
     dest: /tmp/paru
 
 - name: system-setup | aur | change ownership of paru repository
-  path: /tmp/paru
-  state: directory
-  owner: "{{ config_username }}"
-  group: "{{ config_username }}"
-  recurse: yes
+  file:
+    path: /tmp/paru
+    state: directory
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    recurse: yes
 
 - name: system-setup | install paru (AUR helper)
   become_user: "{{ config_username }}"
