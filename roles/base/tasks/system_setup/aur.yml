@@ -35,7 +35,6 @@
     path: /tmp/paru
     state: directory
     owner: aur_builder
-    group: aur_builder
     recurse: yes
 
 - name: system-setup | aur | install paru (AUR helper)
