@@ -3,14 +3,12 @@
     name: 
       - base-devel
       - git
-      - openssh
     state: latest
 
 - name: system-setup | checkout paru (AUR helper)
   ansible.builtin.git:
-    repo: 'git@github.com:Morganamilo/paru.git'
+    repo: 'https://github.com/Morganamilo/paru.git'
     dest: /tmp/paru
-    accept_hostkey: true
 
 - name: system-setup | install paru (AUR helper)
   command: makepkg --syncdeps --install
