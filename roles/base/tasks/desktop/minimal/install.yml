@@ -23,8 +23,8 @@
 - name: Install WM
   command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm
 
-- import_tasks: bluetooth.yml
+- include_tasks: bluetooth.yml
   # todo: add when
   
-- import_tasks: touchpad.yml
+- include_tasks: touchpad.yml
   # todo: add when
