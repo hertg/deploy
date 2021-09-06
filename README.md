@@ -75,6 +75,8 @@ mkinitcpio -p linux
 
 # Install GRUB
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+# alternatively: 
+# grub-install --target=i386-pc /dev/<disk>
 
 # Configure GRUB
 vim /etc/default/grub # GRUB_CMDLINE_LINUX="cryptdevice=/dev/{lvm}:crypt"
