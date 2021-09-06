@@ -1,0 +1,14 @@
+- name: software | utils | install git, lsd, openssh, man, nvim, etc
+  package:
+    name:
+      - git
+      - lsd
+      - openssh
+      - man
+      - nvim
+      - htop
+    state: latest
+
+- name: software | utils | install plugin manager for nvim
+  shell: 
+  

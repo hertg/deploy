@@ -1,44 +1,48 @@
 # https://github.com/kewlfft/ansible-aur
 
-- name: system-setup | install base-devel, git
+- name: system-setup | aur | install base-devel, git
   package:
     name: 
       - base-devel
       - git
     state: latest
 
-- name: system-setup | aur | create aur_builder user
-  user:
-    name: aur_builder
-    create_home: yes
+- name: system-setup | aur | check if paru is already installed
+  stat:
+    path: /usr/bin/paru
+  register: paru_stat
 
-- name: system-setup | aur | allow aur_builder to run pacman
-  lineinfile:
-    path: /etc/sudoers.d/11-install-aur_builder
-    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
-    create: yes
-    validate: 'visudo -cf %s'
+- name: system-setup | aur | install paru
+  when: not paru_stat.stat.exists
+  block:
 
-#- name: system-setup | aur | install paru
-#  become: yes
-#  become_user: aur_builder
-#  command: 
+    - name: system-setup | aur | create aur_builder user
+      user:
+        name: aur_builder
+        create_home: yes
 
-- name: system-setup | aur | checkout paru (AUR helper)
-  ansible.builtin.git:
-    repo: 'https://aur.archlinux.org/paru.git'
-    dest: /tmp/paru
+    - name: system-setup | aur | allow aur_builder to run pacman
+      lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        validate: 'visudo -cf %s'
 
-- name: system-setup | aur | change ownership of paru repository
-  file:
-    path: /tmp/paru
-    state: directory
-    owner: aur_builder
-    recurse: yes
+    - name: system-setup | aur | checkout paru (AUR helper)
+      ansible.builtin.git:
+        repo: 'https://aur.archlinux.org/paru.git'
+        dest: /tmp/paru
 
-- name: system-setup | aur | install paru (AUR helper)
-  become: yes
-  become_user: aur_builder
-  command: makepkg --syncdeps --install --noconfirm
-  args:
-    chdir: /tmp/paru
+    - name: system-setup | aur | change ownership of paru repository
+      file:
+        path: /tmp/paru
+        state: directory
+        owner: aur_builder
+        recurse: yes
+
+    - name: system-setup | aur | install paru (AUR helper)
+      become: yes
+      become_user: aur_builder
+      command: makepkg --syncdeps --install --noconfirm
+      args:
+        chdir: /tmp/paru

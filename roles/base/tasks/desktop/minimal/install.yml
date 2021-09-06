@@ -9,3 +9,22 @@
       - xsel
       - xterm
     state: latest
+
+- name: Install LightDM
+  package:
+    name:
+      - lightdm
+
+- name: Enable LightDM
+  systemd:
+    name: lightdm
+    enabled: yes
+
+- name: Install WM
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm
+
+- import_tasks: bluetooth.yml
+  # todo: add when
+  
+- import_tasks: touchpad.yml
+  # todo: add when

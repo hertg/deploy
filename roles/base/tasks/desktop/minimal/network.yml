@@ -1,0 +1,5 @@
+- name: system-setup | network | install packages
+  package:
+    name:
+      - networkmanager
+      - network-manager-applet

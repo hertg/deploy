@@ -1,4 +1,7 @@
-[workstation]
+[personal]
 nb-asus
-vm-arch
 arch-desktop
+
+[work]
+vm-arch
+tmp-arch

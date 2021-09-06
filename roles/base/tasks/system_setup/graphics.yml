@@ -2,8 +2,9 @@
   package:
     name:
       - nvidia
-      - nvidia-lts
+      - nvidia-lts # required ???
       - nvidia-utils
+      - nvidia-settings
   when:
     - ansible_distribution == "Archlinux"
     - gpu is defined
