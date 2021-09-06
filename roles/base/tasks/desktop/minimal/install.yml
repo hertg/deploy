@@ -20,13 +20,13 @@
     name: lightdm
     enabled: yes
 
+- name: Check if WM already installed
+  stat:
+    path: /usr/bin/leftwm
+  register: leftwm_stat
+
 - name: Install WM
   become: yes
   become_user: aur_builder
   command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm
-
-- include_tasks: bluetooth.yml
-  # todo: add when
-  
-- include_tasks: touchpad.yml
-  # todo: add when
+  when: not leftwm_stat.stat.exists

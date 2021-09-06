@@ -12,7 +12,15 @@
   - import_tasks: system_setup/aur.yml
     when: ansible_distribution == 'Archlinux'
 
+  - import_tasks: system_setup/touchpad.yml
+
   - import_tasks: system_setup/graphics.yml
 
   - import_tasks: desktop/minimal/install.yml
+    when: desktop == 'minimal'
+  
+  - import_tasks: bluetooth.yml
+    when: desktop == 'minimal'
+    
+  - import_tasks: network.yml
     when: desktop == 'minimal'
