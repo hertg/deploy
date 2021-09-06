@@ -21,6 +21,8 @@
     enabled: yes
 
 - name: Install WM
+  become: yes
+  become_user: aur_builder
   command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm
 
 - include_tasks: bluetooth.yml
