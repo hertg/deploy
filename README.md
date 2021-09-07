@@ -1,6 +1,7 @@
 # deploy
+Ansible Tasks to deploy Arch Linux.
 
-
+## Usage
 This will automatically run the playbook called `local.yml` in the given repository.
 ```
 sudo ansible-pull -U https://github.com/hertg/deploy

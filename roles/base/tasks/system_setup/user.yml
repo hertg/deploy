@@ -3,17 +3,17 @@
 #    name: root
 #    password_lock: yes
 
-- name: user | install sudo
+- name: system-setup | user | install sudo
   package:
     name: sudo
     state: latest
 
-- name: user | wheel group
+- name: system-setup | user | create 'wheel' group
   group:
     name: wheel
     state: present
 
-- name: user | allow sudo for wheel group
+- name: system-setup | user | allow 'wheel' group to run sudo
   lineinfile:
     dest: /etc/sudoers
     state: present
@@ -21,12 +21,12 @@
     line: '%wheel ALL=(ALL) ALL'
     validate: 'visudo -cf %s'
 
-- name: user | create group
+- name: system-setup | user | create user group '{{ config_username }}'
   group:
     name: "{{ config_username }}"
     state: present
 
-- name: user | create user
+- name: system-setup | user | create user '{{ config_username }}'
   user:
     name: "{{ config_username }}"
     groups: 

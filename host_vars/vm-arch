@@ -1,4 +1,4 @@
 ---
-desktop: minimal # minimal, gnome?, kde?
+desktop: xfce # minimal, gnome?, kde?
 wm: leftwm # leftwm, dwm?, awesome?
 #gpu: nvidia

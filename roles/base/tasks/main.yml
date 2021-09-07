@@ -16,6 +16,7 @@
 
   - import_tasks: system_setup/graphics.yml
 
+  # MINIMAL
   - import_tasks: desktop/minimal/install.yml
     when: desktop == 'minimal'
   
@@ -24,3 +25,9 @@
     
   - import_tasks: desktop/minimal/network.yml
     when: desktop == 'minimal'
+  
+  # XFCE
+  - import_tasks: desktop/xfce/install.yml
+    when: desktop == 'xfce'
+  
+  - import_tasks: software/utils.yml
