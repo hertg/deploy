@@ -10,6 +10,9 @@
       - xterm
     state: latest
 
+- name: Configure x11 keymap
+  command: localectl set-x11-keymap {{ config_system_keymap_short }}
+
 #- name: Install LightDM
 #  package:
 #    name:

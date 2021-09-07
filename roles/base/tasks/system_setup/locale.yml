@@ -17,9 +17,6 @@
 - name: system-setup | locale | configure keymap to '{{ config_system_keymap }}'
   command: localectl set-keymap {{ config_system_keymap }}
 
-- name: system-setup | locale | configure x11 keymap
-  command: localectl set-x11-keymap {{ config_system_keymap_short }}
-
 #- name: system-setup | locale | configure vconsole
 #  lineinfile:
 #    path: /etc/vconsole.conf
