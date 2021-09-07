@@ -1,18 +1,18 @@
-- name: software | utils | install git, lsd, openssh, man, nvim, etc
+- name: software | utils | install git, lsd, openssh, man, neovim, etc
   package:
     name:
       - git
       - lsd
       - openssh
       - man
-      - nvim
+      - neovim
       - htop
       - alacritty
       - dmenu
       - rofi
     state: latest
 
-- name: software | utils | install plugin manager for nvim
+- name: software | utils | install plugin manager for neovim
   shell: 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # run :PlugInstall in NeoVim?
