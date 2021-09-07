@@ -10,15 +10,31 @@
       - xterm
     state: latest
 
-- name: Install LightDM
-  package:
-    name:
-      - lightdm
-      - lightdm-gtk-greeter
+#- name: Install LightDM
+#  package:
+#    name:
+#      - lightdm
+#      - lightdm-gtk-greeter
+
+#- name: Enable LightDM
+#  systemd:
+#    name: lightdm
+#    enabled: yes
+
+- name: Check if Display-Manager already installed
+  stat:
+    path: /usr/bin/ly
+  register: ly_stat
+
+- name: Install Ly
+  become: yes
+  become_user: aur_builder
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm ly
+  when: not ly_stat.stat.exists
 
 - name: Enable LightDM
   systemd:
-    name: lightdm
+    name: ly
     enabled: yes
 
 - name: Check if WM already installed
