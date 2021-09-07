@@ -1,3 +1,4 @@
 - name: system-setup | touchpad | install packages
   package:
     name: xf86-input-synaptics
+  # todo: add when

@@ -41,7 +41,7 @@ mount /dev/{efi} /mnt/boot/efi
 
 pacman -Sy
 
-pacstrap /mnt base base-devel grub efibootmgr dialog wpa_supplicant linux linux-headers linux-firmware vim dhcpcd netctl lvm2 git ansible
+pacstrap /mnt base base-devel grub efibootmgr linux linux-headers linux-firmware vim lvm2 git ansible iwd networkmanager
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Enter the new system
