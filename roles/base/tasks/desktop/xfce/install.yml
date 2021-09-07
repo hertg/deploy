@@ -1,6 +1,8 @@
 - name: desktop | xfce | install xfce
   package:
     name: 
+      - xorg-server
+      - xorg-xinit
       - xfce4
       - xfce4-goodies
     state: latest
