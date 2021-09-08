@@ -12,10 +12,21 @@
     state: present
 
 - name: system-setup | locale | configure locale to '{{ config_system_locale }}' and language to '{{ config_system_language }}'
-  command: localectl set-locale LANG={{ config_system_locale }} LC_MESSAGES={{ config_system_language }}
+  command: >
+    localectl set-locale 
+    LANG={{ config_system_language }} 
+    LC_TIME={{ config_system_locale }} 
+    LC_MEASUREMENT={{ config_system_locale }}
+    LC_MONETARY={{ config_system_locale }}
+    LC_NUMERIC={{ config_system_locale }}
+    LC_TELEPHONE={{ config_system_locale }}
 
 - name: system-setup | locale | configure keymap to '{{ config_system_keymap }}'
   command: localectl set-keymap {{ config_system_keymap }}
+
+# TODO: After X11 installed / configured
+#- name: system-setup | locale | configure X11 keymap to '{{ config_system_keymap_short }}'
+#  command: localectl set-x11-keymap {{ config_system_keymap_short }}
 
 #- name: system-setup | locale | configure vconsole
 #  lineinfile:
