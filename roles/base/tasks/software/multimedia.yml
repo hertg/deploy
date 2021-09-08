@@ -3,8 +3,17 @@
     name:
       - sxiv # image viewer
       - llpp # document viewer
-      - masterpdfeditor-free # pdf editor
       - ffmpeg # video
       - maim # screenshot
     state: latest
 
+- name: software | multimedia | check if masterpdf-editor is already installed
+  stat:
+    path: /usr/bin/masterpdfeditor4
+  register: pdf_editor_stat
+
+- name: software | multimedia | install pdf editor
+  become: yes
+  become_user: aur_builder
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm masterpdfeditor-free
+  when: not pdf_editor_stat.stat.exists
