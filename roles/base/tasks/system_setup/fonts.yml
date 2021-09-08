@@ -2,5 +2,15 @@
   package:
     name: 
       - ttf-dejavu
-      - nerd-fonts-hack
     state: latest
+
+#- name: system-setup | fonts | check if font is already installed
+#  stat:
+#    path: /usr/bin/ly
+#  register: ly_stat
+
+- name: system-setup | fonts | install fonts from AUR
+  become: yes
+  become_user: aur_builder
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm nerd-fonts-hack
+#  when: not ly_stat.stat.exists
