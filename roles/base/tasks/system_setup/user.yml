@@ -34,3 +34,26 @@
       - wheel
     state: present
     create_home: yes
+
+- name: system-setup | user | create config directory for user '{{ config_username }}'
+  file:
+    path: /home/{{ config_username }}/{{ item.dir }}
+    state: directory
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    mode: 0700
+  with_items:
+    - { dir: '.config' }
+    - { dir: '.config/htop' }
+
+- name: system-setup | user | copy user configs
+  copy:
+    src: userconfig/{{ item.src }}
+    dest: /home/{{ config_username }}/{{ item.dest }}
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    mode: 0600
+  with_items:
+    - { src: 'bash_profile', dest: '.bash_profile' }
+    - { src: 'bashrc', dest: '.bashrc' }
+    - { src: 'xprofile', dest: '.xprofile' }

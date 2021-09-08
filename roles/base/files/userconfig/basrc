@@ -1,0 +1,32 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# aliases
+alias ls='lsd'
+alias ll='lsd -al'
+alias ..='cd ..'
+alias cpk='colorpicker --short --one-shot | xclip -selection clipboard'
+alias alacritty='WINIT_X11_SCALE_FACTOR=1 alacritty'
+
+alias k="kubectl"
+alias cat="bat -p"
+
+alias ga='git add .'
+alias gs='git status'
+alias gm='git commit -m'
+alias gam="git add . && git commit -m"
+
+alias grep='grep --color'
+alias vim='nvim'
+alias vi='nvim'
+
+# exports
+export EDITOR=vim
+export VISUAL=vim
+export HISTCONTROL=ignoreboth
+
+# prompt
+export PS1="\[\e[92m\]$(whoami | head -c 1)\[\e[m\]@\[\e[95m\]$(hostname | head -c 1)\[\e[m\]:\[\e[94m\]\w\[\e[m\] | \[\e[92m\]→\[\e[m\] "
+
+# PATH
+[[ -d $HOME/scripts ]] && export PATH="$HOME/scripts:$PATH"

@@ -1,0 +1,6 @@
+unclutter & # removes cursor when its not moving
+xsettingsd & # provides settings to xorg applications (ie. font/aliasing for Java/Wine)
+xbindkeys & # key combinations
+numlockx & # numlock
+picom & # enable picom X11 compositor
+nitrogen --restore & # restore wallpaper
