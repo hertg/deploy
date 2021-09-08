@@ -16,10 +16,15 @@
 
   - import_tasks: system_setup/graphics.yml
 
+  - import_tasks: system_setup/fonts.yml
+
   # MINIMAL
   - import_tasks: desktop/minimal/install.yml
     when: desktop == 'minimal'
   
+  - import_tasks: desktop/minimal/audio.yml
+    when: desktop == 'minimal'
+
   - import_tasks: desktop/minimal/bluetooth.yml
     when: desktop == 'minimal'
     
@@ -31,3 +36,8 @@
     when: desktop == 'xfce'
   
   - import_tasks: software/utils.yml
+  - import_tasks: software/multimedia.yml
+  - import_tasks: software/browser.yml
+
+  # post install
+  - import_tasks: post_install.yml

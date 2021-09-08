@@ -1,0 +1,6 @@
+- name: system-setup | fonts | install fonts
+  package:
+    name: 
+      - ttf-dejavu
+      - nerd-fonts-hack
+    state: latest

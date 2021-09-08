@@ -4,11 +4,21 @@
       - xorg-server
       - xorg-xinit
       - xorg-xrandr
+      - xorg-xrdb
       - xbindkeys
       - xclip
       - xsel
       - xterm
+      - xsettingsd
     state: latest
+
+- name: desktop | minimal | install compositor, background, and more
+  package:
+    name:
+      - picom # compositor
+      - nitrogen # background
+      - unclutter # hide cursor after timeout
+      - numlockx
 
 #- name: Install LightDM
 #  package:

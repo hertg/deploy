@@ -1,0 +1,10 @@
+- name: software | multimedia | install file viewers
+  package:
+    name:
+      - sxiv # image viewer
+      - llpp # document viewer
+      - masterpdfeditor-free # pdf editor
+      - ffmpeg # video
+      - maim # screenshot
+    state: latest
+

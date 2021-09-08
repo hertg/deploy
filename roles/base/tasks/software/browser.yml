@@ -1,0 +1,5 @@
+- name: software | browser | install firefox
+  package:
+    name:
+      - firefox
+    state: latest

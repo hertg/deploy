@@ -2,6 +2,7 @@
   package:
     name:
       - networkmanager
+      - network-manager-applet
 
 - name: system-setup | network | enable and start NetworkManager
   systemd:
