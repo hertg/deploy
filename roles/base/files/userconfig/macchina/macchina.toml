@@ -8,7 +8,7 @@ no_separator = false
 no_bar_delimiter = true
 
 # Hides the title of the box surrounding system information
-no_title = false
+no_title = true
 
 # Disables the box surrounding system information.
 no_box = false
@@ -17,16 +17,17 @@ no_box = false
 no_ascii = false
 
 # Specify your own ASCII art from a text file (supports ANSI escape codes)
-# custom_ascii = "/path/to/text/file"
+custom_ascii = "/home/michael/.config/macchina/arch.ascii"
+# todo: username is hardcoded
 
 # Prefer small ASCII variant.
 small_ascii = false
 
 # Displays a palette of your active colorscheme
-palette = true
+palette = false
 
 # Turns data into bars for specific readouts
-bar = true
+bar = false
 
 # Randomizes the color of the keys each time your run the program
 random_color = false
@@ -44,7 +45,7 @@ random_sep_color = false
 #   - Yellow
 #   - Red
 #   - Magenta
-color = "Blue"
+color = "Cyan"
 
 # Specify a color for the separator.
 # Accepted values (case-sensitive):
@@ -66,10 +67,10 @@ long_shell = false
 
 # Toggle between the current shell or the default one
 # This feature has not yet landed in a release, only uncomment if using upstream
-# current_shell = false 
+# current_shell = false
 
 # Specify the title of the box
-box_title = " Macchina "
+#box_title = " System "
 
 # Specify the horizontal inner margin value of the box surrounding system information.
 box_inner_margin_x = 1
@@ -91,7 +92,7 @@ box_inner_margin_y = 0
 # To set 'foobar' as a theme, place foobar.json
 # in $XDG_DATA_HOME/macchina/themes
 # and set theme = "foobar" (case-sensitive)
-theme = "Beryllium"
+theme = "Boron"
 
 # Hides the specified readouts.
 # Conflicts with: show_only
@@ -115,7 +116,7 @@ theme = "Beryllium"
 #   - Battery
 # Example:
 #   hide = ["Battery", "Memory", ...]
-hide = []
+#hide = []
 
 # Displays only the specified readouts.
 # Conflicts with: hide
@@ -139,4 +140,6 @@ hide = []
 #   - Battery
 # Example:
 #   show_only = ["Battery", "Memory", ...]
-# show_only = []
+#show_only = ["Kernel","Packages","LocalIP","Uptime","Processor","ProcessorLoad","Memory"]
+show_only = ["Kernel", "Processor","Packages","Uptime","LocalIP"]
+
