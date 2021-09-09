@@ -141,5 +141,5 @@ theme = "Boron"
 # Example:
 #   show_only = ["Battery", "Memory", ...]
 #show_only = ["Kernel","Packages","LocalIP","Uptime","Processor","ProcessorLoad","Memory"]
-show_only = ["Kernel", "Processor","Packages","Uptime","LocalIP"]
+show_only = ["Kernel", "Machine", "WindowManager", "Processor","Packages","Uptime","LocalIP"]
 
