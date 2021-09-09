@@ -1,1 +1,44 @@
-/home/michael/repos/dotfiles/xbindkeysrc
+# Increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +5%"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+"pactl set-sink-volume @DEFAULT_SINK@ -5%"
+   XF86AudioLowerVolume
+
+# Mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+   XF86AudioMute
+
+# Play/Pause
+"playerctl play-pause"
+   XF86AudioPlay
+
+# Stop
+"playerctl stop"
+   XF86AudioStop
+
+# Previous
+"playerctl previous"
+   XF86AudioPrev
+
+# Next
+"playerctl next"
+   XF86AudioNext
+
+# Lock screen
+#"light-locker-command -l"
+#   Alt+Mod2 + Alt_L
+
+# Screenshot to clipboard
+"sleep 0.5 && maim -u -s | xclip -selection clipboard -t image/png"
+   Mod2 + Print
+
+"sleep 0.5 && mkdir -p ~/Pictures/screenshots && maim -u -s ~/Pictures/screenshots/$(date +%F_%H-%M-%S).png"
+   Shift + Mod2 + Print
+
+"light -A 10"
+   XF86MonBrightnessUp
+
+"light -U 10"
+   XF86MonBrightnessDown

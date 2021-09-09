@@ -1,1 +1,26 @@
-/home/michael/repos/dotfiles/Xresources
+Xcursor.size: 16
+
+dwm.selbordercolor: #ff47ea
+!dwm.maxwindowwidth: 2560
+dwm.maxwindowwidth: 2100
+
+!! color scheme
+*.foreground:   #c5c5c5
+*.background:   #000000
+*.cursorColor:  #c5c5c5
+*.color0:       #1c1c1c
+*.color8:       #666666
+*.color1:       #ff005b
+*.color9:       #ff00a0
+*.color2:       #cee318
+*.color10:      #ccff00
+*.color3:       #ffe755
+*.color11:      #ff9f00
+*.color4:       #048ac7
+*.color12:      #48c6ff
+*.color5:       #833c9f
+*.color13:      #be67e1
+*.color6:       #0ac1cd
+*.color14:      #63e7f0
+*.color7:       #e5e5e5
+*.color15:      #f3f3f3

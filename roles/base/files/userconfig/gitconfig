@@ -1,1 +1,7 @@
-/home/michael/repos/dotfiles/gitconfig
+[user]
+	email = 3533648+hertg@users.noreply.github.com
+	name = Michael
+[credential]
+	helper = store
+[pull]
+	rebase = false
