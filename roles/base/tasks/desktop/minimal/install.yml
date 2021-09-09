@@ -10,7 +10,6 @@
       - xsel
       - xterm
       - xsettingsd
-    state: latest
 
 - name: desktop | minimal | install compositor, background, and more
   package:

@@ -44,11 +44,6 @@
     mode: 0700
   with_items:
     - { dir: '.config' }
-    #- { dir: '.config/htop' }
-    #- { dir: '.config/fontconfig' }
-    #- { dir: '.config/leftwm' }
-    #- { dir: '.config/leftwm/themes' }
-    #- { dir: '.config/macchina' }
 
 - name: system-setup | user | copy user configs
   copy:
@@ -64,6 +59,3 @@
     - { src: 'fontconfig', dest: '.config/'}
     - { src: 'leftwm', dest: '.config/'}
     - { src: 'macchina', dest: '.config/'}
-    #- { src: 'fontconfig/fonts.conf', dest: '.config/fontconfig/fonts.conf' }
-    #- { src: 'leftwm/config.toml', dest: '.config/leftwm/config.toml' }
-    #- { src: 'leftwm/config.toml', dest: '.config/leftwm/config.toml' }

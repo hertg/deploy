@@ -5,7 +5,6 @@
       - xorg-xinit
       - xfce4
       - xfce4-goodies
-    state: latest
 
 #- name: Install LightDM
 #  package:

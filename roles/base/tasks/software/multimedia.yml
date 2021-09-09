@@ -5,7 +5,6 @@
       - llpp # document viewer
       - ffmpeg # video
       - maim # screenshot
-    state: latest
 
 - name: software | multimedia | check if masterpdf-editor is already installed
   stat:

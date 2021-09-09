@@ -17,21 +17,34 @@
   package:
     name:
       - lsd # 'ls' alternative
+      - bat # 'cat' alternative
       - alacritty # terminal
       - dmenu # launcher
       - rofi # launcher
       - ranger # console file manager
       - ueberzug # console image preview
-    state: latest
+
+- name: software | utils | check if macchina is already installed
+  stat:
+    path: /usr/bin/macchina
+  register: macchina_stat
 
 - name: software | utils | install fetch (macchina)
   become: yes
   become_user: aur_builder
   command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm macchina
+  when: not macchina_stat.stat.exists
+
+- name: software | utils | check if plugin manager for neovim is already installed
+  stat:
+    path: "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim"
+  register: plugin_manager_stat
 
 - name: software | utils | install plugin manager for neovim
   shell: 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  when: not plugin_manager_stat.stat.exists
 
 - name: software | utils | install plugins for neovim
   shell: 'nvim +PlugInstall +qa --headless'
+  when: not plugin_manager_stat.stat.exists
   
