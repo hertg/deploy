@@ -21,3 +21,12 @@
     - ansible_distribution == "Archlinux"
     - gpu is defined
     - gpu == "amd"
+
+- name: system-setup | graphics | install intel drivers
+  package:
+    name:
+      - xf86-video-intel
+  when:
+    - ansible_distribution == "Archlinux"
+    - gpu is defined
+    - gpu == "intel"
