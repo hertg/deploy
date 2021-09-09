@@ -56,6 +56,16 @@
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }
     - { src: 'xprofile', dest: '.xprofile' }
+    - { src: 'Xresources', dest: '.Xresources' }
+    - { src: 'xsettingsd', dest: '.xsettingsd' }
+    - { src: 'xbindkeysrc', dest: '.xbindkeysrc' }
+    - { src: 'inputrc', dest: '.inputrc' }
+    - { src: 'gitconfig', dest: '.gitconfig' }
+    - { src: 'nvim', dest: '.config/'}
+    - { src: 'picom', dest: '.config/'}
+    - { src: 'ranger', dest: '.config/'}
+    - { src: 'sxiv', dest: '.config/'}
+    - { src: 'llpp.conf', dest: '.config/'}
     - { src: 'fontconfig', dest: '.config/'}
     - { src: 'leftwm', dest: '.config/'}
     - { src: 'macchina', dest: '.config/'}
