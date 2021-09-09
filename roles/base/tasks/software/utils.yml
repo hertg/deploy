@@ -36,15 +36,21 @@
   when: not macchina_stat.stat.exists
 
 - name: software | utils | check if plugin manager for neovim is already installed
+  become: yes
+  become_user: "{{ config_username }}"
   stat:
     path: /home/{{ config_username }}/.local/share/nvim/site/autoload/plug.vim
   register: plugin_manager_stat
 
 - name: software | utils | install plugin manager for neovim
+  become: yes
+  become_user: "{{ config_username }}"
   shell: curl -fLo /home/{{ config_username }}/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   when: not plugin_manager_stat.stat.exists
 
 - name: software | utils | install plugins for neovim
+  become: yes
+  become_user: "{{ config_username }}"
   shell: 'nvim +PlugInstall +qa --headless'
   when: not plugin_manager_stat.stat.exists
   
