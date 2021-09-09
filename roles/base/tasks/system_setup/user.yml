@@ -45,6 +45,7 @@
   with_items:
     - { dir: '.config' }
     - { dir: '.config/htop' }
+    - { dir: '.config/fontconfig' }
 
 - name: system-setup | user | copy user configs
   copy:
@@ -57,3 +58,4 @@
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }
     - { src: 'xprofile', dest: '.xprofile' }
+    - { src: 'fonts.conf', dest: 'fontconfig/fonts.conf' }
