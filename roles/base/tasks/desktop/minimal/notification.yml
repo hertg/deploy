@@ -1,0 +1,6 @@
+#- name: system-setup | notification | install notification daemon
+#  package:
+#    name:
+#      - dunst
+
+# todo: wired? https://github.com/Toqozz/wired-notify
