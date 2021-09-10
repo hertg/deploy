@@ -1,0 +1,9 @@
+- name: desktop | post-install | configure X11 keymap to '{{ config_system_keymap_short }}' and add caps:swapescape
+  command: localectl set-x11-keymap {{ config_system_keymap_short }} pc105 "" caps:swapescape
+
+- name: desktop | post-install | copy X11 configs
+  copy:
+    src: systemconfig/{{ item.src }}
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: 'X11', dest: '/etc/X11/xorg.conf.d' }

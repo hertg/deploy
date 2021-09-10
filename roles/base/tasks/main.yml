@@ -18,26 +18,32 @@
 
   - import_tasks: system_setup/fonts.yml
 
-  # MINIMAL
-  - import_tasks: desktop/minimal/install.yml
-    when: desktop == 'minimal'
-  
-  - import_tasks: desktop/minimal/audio.yml
-    when: desktop == 'minimal'
+  - when: desktop is defined
+    block:
 
-  - import_tasks: desktop/minimal/bluetooth.yml
-    when: desktop == 'minimal'
-    
-  - import_tasks: desktop/minimal/network.yml
-    when: desktop == 'minimal'
-  
-  - import_tasks: desktop/minimal/notification.yml
-    when: desktop == 'minimal'
-  
-  # XFCE
-  - import_tasks: desktop/xfce/install.yml
-    when: desktop == 'xfce'
-  
+      # MINIMAL
+      - import_tasks: desktop/minimal/install.yml
+        when: desktop == 'minimal'
+      
+      - import_tasks: desktop/minimal/audio.yml
+        when: desktop == 'minimal'
+
+      - import_tasks: desktop/minimal/bluetooth.yml
+        when: desktop == 'minimal'
+        
+      - import_tasks: desktop/minimal/network.yml
+        when: desktop == 'minimal'
+      
+      - import_tasks: desktop/minimal/notification.yml
+        when: desktop == 'minimal'
+      
+      # XFCE
+      - import_tasks: desktop/xfce/install.yml
+        when: desktop == 'xfce'
+
+      # Desktop Post-Install
+      - import_tasks: desktop/post_desktop_install.yml
+      
   - import_tasks: software/utils.yml
   - import_tasks: software/multimedia.yml
   - import_tasks: software/browser.yml

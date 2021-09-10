@@ -1,2 +1,0 @@
-- name: post-install | configure X11 keymap to '{{ config_system_keymap_short }}'
-  command: localectl set-x11-keymap {{ config_system_keymap_short }}
