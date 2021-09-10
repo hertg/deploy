@@ -17,7 +17,9 @@
   - import_tasks: system_setup/graphics.yml
 
   - import_tasks: system_setup/fonts.yml
-  
+
+  - import_tasks: system_setup/icons.yml
+
   - import_tasks: system_setup/power.yml
 
   - when: desktop is defined
