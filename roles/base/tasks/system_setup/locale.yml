@@ -24,12 +24,3 @@
 - name: system-setup | locale | configure keymap to '{{ config_system_keymap }}'
   command: localectl set-keymap {{ config_system_keymap }}
 
-# TODO: After X11 installed / configured
-#- name: system-setup | locale | configure X11 keymap to '{{ config_system_keymap_short }}'
-#  command: localectl set-x11-keymap {{ config_system_keymap_short }}
-
-#- name: system-setup | locale | configure vconsole
-#  lineinfile:
-#    path: /etc/vconsole.conf
-#    line: 'KEYMAP={{ config_system_keymap }}'
-#    create: yes
