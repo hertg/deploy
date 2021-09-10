@@ -51,7 +51,7 @@
     dest: /home/{{ config_username }}/{{ item.dest }}
     owner: "{{ config_username }}"
     group: "{{ config_username }}"
-    mode: 0600
+    mode: preserve
   with_items:
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }
