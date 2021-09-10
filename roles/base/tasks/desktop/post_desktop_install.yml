@@ -6,4 +6,4 @@
     src: systemconfig/{{ item.src }}
     dest: "{{ item.dest }}"
   with_items:
-    - { src: 'X11', dest: '/etc/X11/xorg.conf.d' }
+    - { src: 'X11', dest: '/etc/X11/xorg.conf.d/' }
