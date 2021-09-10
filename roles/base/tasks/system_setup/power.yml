@@ -1,0 +1,7 @@
+# https://wiki.archlinux.org/title/Power_management
+- name: system-setup | power | configure power management with logind.conf
+  copy:
+    src: systemconfig/{{ item.src }}
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: 'logind.conf', dest: '/etc/systemd/' }

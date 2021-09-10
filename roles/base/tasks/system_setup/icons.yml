@@ -1,0 +1,15 @@
+- name: system-setup | icons | install icons
+  package:
+    name: 
+      - papirus-icon-theme
+
+#- name: system-setup | fonts | check if icons are already installed
+#  stat:
+#    path: /usr/bin/ly
+#  register: ly_stat
+
+#- name: system-setup | fonts | install icons from AUR
+#  become: yes
+#  become_user: aur_builder
+#  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm 
+#  when: not ly_stat.stat.exists

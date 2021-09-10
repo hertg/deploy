@@ -2,7 +2,6 @@
   package:
     name: 
       - ttf-dejavu
-    state: latest
 
 #- name: system-setup | fonts | check if font is already installed
 #  stat:
