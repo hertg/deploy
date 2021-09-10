@@ -3,13 +3,13 @@ url = "https://raw.githubusercontent.com/leftwm/leftwm-community-themes/master/k
 name = "community"
 themes = []
 
-#[[repos]]
-#url = "localhost"
-#name = "LOCAL"
+[[repos]]
+url = "localhost"
+name = "LOCAL"
 
-#[[repos.themes]]
-#name = "hertg"
-#directory = "/home/michael/.config/leftwm/themes/hertg"
-#version = "0.0.0"
-#leftwm_versions = "*"
-#current = true
+[[repos.themes]]
+name = "hertg"
+directory = "/home/michael/.config/leftwm/themes/hertg"
+version = "0.0.0"
+leftwm_versions = "*"
+current = true
