@@ -70,3 +70,4 @@
     - { src: 'leftwm', dest: '.config/'}
     - { src: 'macchina', dest: '.config/'}
     - { src: 'alacritty', dest: '.config/'}
+    - { src: 'rofi', dest: '.config/'}

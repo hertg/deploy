@@ -23,6 +23,8 @@
       - rofi # launcher
       - ranger # console file manager
       - ueberzug # console image preview
+      - light # control screen backlight
+      - playerctl # control media playback
 
 - name: software | utils | check if macchina is already installed
   stat:

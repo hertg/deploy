@@ -1,0 +1,62 @@
+* {
+	bg-color: #282C33;
+	bd-color: #2e343f;
+	fg-color: #8ca0aa;
+
+  //background-color: @bg-color;
+  //border-color: @bd-color;
+	background-color: @bg-color;
+	border-color: @bd-color;
+  text-color: @fg-color;
+  spacing: 0;
+  width: 512px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 16px;
+  border: 0 1px 0 0;
+}
+
+entry {
+  background-color: @bd-color;
+  border: 0 0 1px 0;
+  border-color: #282C33;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 16px;
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+}
+
+element {
+  border: 0 0 1px 0;
+  padding: 16px;
+}
+
+element selected {
+  background-color: @bd-color;
+}
+
+element-icon {
+	background-color: transparent;
+	padding: 0 16px 0 0;
+	size: 24px;
+}
+
+element-text {
+	background-color: transparent;
+	size: 20px;
+}
+
+/* vim:ft=css
