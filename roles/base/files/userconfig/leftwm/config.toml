@@ -263,9 +263,15 @@ value = "Alacritty" # Name set for the scratchpad
 modifier = ["modkey"]
 key = "s"
 
+#[[keybind]]
+#command = "SetLayout"
+#value = "CenterMain"
+#modifier = ["modkey"]
+#key = "m"
+
 [[keybind]]
 command = "SetLayout"
-value = "CenterMain"
+value = "CenterMainBalancedMaxed"
 modifier = ["modkey"]
 key = "m"
 
