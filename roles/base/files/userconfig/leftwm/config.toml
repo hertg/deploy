@@ -125,12 +125,12 @@ key = "space" # todo
 [[keybind]]
 command = "FocusWorkspaceNext"
 modifier = ["modkey"]
-key = "." # todo
+key = "period"
 
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
-key = "," # todo
+key = "comma"
 
 [[keybind]]
 command = "GotoTag"
