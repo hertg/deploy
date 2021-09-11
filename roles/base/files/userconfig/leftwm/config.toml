@@ -25,17 +25,17 @@ layouts = [
 name = "Alacritty" # This is the name which is referenced when calling (case-sensitive)
 value = "alacritty" # The command to load the application if it isn't started
 
-[[workspaces]]
-y = 0
-x = 0
-height = 1440
-width = 1720
+#[[workspaces]]
+#y = 0
+#x = 0
+#height = 1440
+#width = 1720
 
-[[workspaces]]
-y = 0
-x = 1720
-height = 1440
-width = 1720
+#[[workspaces]]
+#y = 0
+#x = 1720
+#height = 1440
+#width = 1720
 
 [[keybind]]
 command = "Execute"
@@ -125,12 +125,12 @@ key = "space" # todo
 [[keybind]]
 command = "FocusWorkspaceNext"
 modifier = ["modkey"]
-key = "Right" # todo
+key = "." # todo
 
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
-key = "Left" # todo
+key = "," # todo
 
 [[keybind]]
 command = "GotoTag"
