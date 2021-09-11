@@ -2,6 +2,41 @@ modkey = "Mod4"
 workspaces = []
 tags = ["home", "chat", "surf", "media", "game", "remote", "code", "database", "graphics"]
 
+focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
+focus_new_windows = true
+
+layouts = [
+    "MainAndDeck",
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    #"GridHorizontal",
+    #"EvenHorizontal",
+    #"EvenVertical",
+    "Fibonacci",
+    "CenterMain",
+    "CenterMainBalanced",
+    #"Monocle",
+    #"RightWiderLeftStack",
+    #"LeftWiderRightStack",
+]
+
+# Create a scratchpad for alacritty
+[[scratchpad]]
+name = "Alacritty" # This is the name which is referenced when calling (case-sensitive)
+value = "alacritty" # The command to load the application if it isn't started
+
+[[workspaces]]
+y = 0
+x = 0
+height = 1440
+width = 1720
+
+[[workspaces]]
+y = 0
+x = 1720
+height = 1440
+width = 1720
+
 [[keybind]]
 command = "Execute"
 value = "rofi -show drun"
@@ -34,7 +69,7 @@ key = "r"
 command = "Execute"
 value = "pkill leftwm"
 modifier = ["modkey", "Shift"]
-key = "x"
+key = "q"
 
 [[keybind]]
 command = "Execute"
@@ -80,12 +115,12 @@ key = "j" # default: Down
 [[keybind]]
 command = "NextLayout"
 modifier = ["modkey"]
-key = "Space" # todo
+key = "space" # todo
 
 #[[keybind]]
 #command = "PreviousLayout"
 #modifier = ["modkey", "Shift"]
-#key = "Space" # todo
+#key = "space" # todo
 
 [[keybind]]
 command = "FocusWorkspaceNext"
@@ -216,3 +251,31 @@ command = "DecreaseMainWidth"
 value = "5" # todo: ???
 modifier = ["modkey"]
 key = "h"
+
+[[keybind]]
+command = "FloatingToTile"
+modifier = ["modkey", "Shift"]
+key = "space"
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "Alacritty" # Name set for the scratchpad
+modifier = ["modkey"]
+key = "s"
+
+[[keybind]]
+command = "SetLayout"
+value = "CenterMain"
+modifier = ["modkey"]
+key = "m"
+
+[[keybind]]
+command = "SetLayout"
+value = "MainAndVertStack"
+modifier = ["modkey"]
+key = "t"
+
+#[[keybind]]
+#command = "ToggleFullScreen"
+#modifier = ["modkey"]
+#key = "f"
