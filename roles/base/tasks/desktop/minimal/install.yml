@@ -14,7 +14,6 @@
 - name: desktop | minimal | install compositor, background, and more
   package:
     name:
-      - picom # compositor
       - nitrogen # background
       - unclutter # hide cursor after timeout
       - numlockx
