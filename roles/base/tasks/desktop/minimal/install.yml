@@ -47,7 +47,7 @@
 - name: desktop | minimal | disable (old) display-manager (lightdm)
   systemd:
     name: lightdm
-    enabled: yes
+    enabled: no
 
 - name: desktop | minimal | enable display-manager (ly)
   systemd:
