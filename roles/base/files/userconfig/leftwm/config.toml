@@ -1,7 +1,7 @@
 modkey = "Mod4"
 #workspaces = []
 tags = ["home", "chat", "surf", "media", "game", "remote", "code", "database", "graphics"]
-
+max_window_width = 0.4
 focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
@@ -29,13 +29,14 @@ value = "alacritty" # The command to load the application if it isn't started
 #y = 0
 #x = 0
 #height = 1440
-#width = 1720
+#width = 2560
+#max_window_width = 0.8
 
 #[[workspaces]]
 #y = 0
-#x = 1720
+#x = 2560
 #height = 1440
-#width = 1720
+#width = 2560
 
 [[keybind]]
 command = "Execute"
