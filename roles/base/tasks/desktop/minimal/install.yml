@@ -44,10 +44,10 @@
   command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm ly
   when: not ly_stat.stat.exists
 
-- name: desktop | minimal | disable (old) display-manager (lightdm)
-  systemd:
-    name: lightdm
-    enabled: no
+#- name: desktop | minimal | disable (old) display-manager (lightdm)
+#  systemd:
+#    name: lightdm
+#    enabled: no
 
 - name: desktop | minimal | enable display-manager (ly)
   systemd:
