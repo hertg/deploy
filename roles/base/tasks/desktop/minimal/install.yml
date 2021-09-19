@@ -62,5 +62,5 @@
 - name: desktop | minimal | install window-manager (leftwm)
   become: yes
   become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm-git
   when: not leftwm_stat.stat.exists
