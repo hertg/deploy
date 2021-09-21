@@ -6,13 +6,13 @@ focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
 layouts = [
-    "MainAndDeck",
-    "MainAndVertStack",
-    "MainAndHorizontalStack",
-    #"GridHorizontal",
+    #"MainAndDeck",
+    #"MainAndVertStack",
+    #"MainAndHorizontalStack",
+    "GridHorizontal",
     #"EvenHorizontal",
     #"EvenVertical",
-    "Fibonacci",
+    #"Fibonacci",
     "CenterMain",
     "CenterMainBalanced",
     #"Monocle",
