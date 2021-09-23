@@ -1,0 +1,10 @@
+- name: desktop | gnome | install gnome
+  package:
+    name: 
+      - gnome
+      - gnome-tweaks
+
+- name: desktop | gnome | enable display-manager (gdm)
+  systemd:
+    name: gdm
+    enabled: yes

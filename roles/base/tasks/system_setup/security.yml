@@ -1,0 +1,9 @@
+- name: software | utils | basic system utilities
+  package:
+    name:
+      - libsecret
+      - seahorse
+      - ufw
+
+- name: software | security | enable ufw
+  command: ufw enable

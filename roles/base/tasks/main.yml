@@ -9,17 +9,12 @@
     when: ansible_distribution == 'Archlinux'
 
   - import_tasks: system_setup/locale.yml
-
+  - import_tasks: system_setup/security.yml
   - import_tasks: system_setup/user.yml  
-
   - import_tasks: system_setup/touchpad.yml
-
   - import_tasks: system_setup/graphics.yml
-
   - import_tasks: system_setup/fonts.yml
-
   - import_tasks: system_setup/icons.yml
-
   - import_tasks: system_setup/power.yml
 
   - when: desktop is defined
@@ -44,6 +39,10 @@
       # XFCE
       - import_tasks: desktop/xfce/install.yml
         when: desktop == 'xfce'
+      
+      # Gnome
+      - import_tasks: desktop/gnome/install.yml
+        when: desktop == 'gnome'
 
       # Desktop Post-Install
       - import_tasks: desktop/post_desktop_install.yml

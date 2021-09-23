@@ -14,7 +14,8 @@
 - name: desktop | minimal | install compositor, background, and more
   package:
     name:
-      - nitrogen # background
+      - feh # background
+      #- nitrogen
       - unclutter # hide cursor after timeout
       - numlockx
 
