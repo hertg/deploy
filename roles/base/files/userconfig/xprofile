@@ -4,3 +4,4 @@ xbindkeys & # key combinations
 numlockx & # numlock
 picom & # enable picom X11 compositor
 nitrogen --restore & # restore wallpaper
+dunst & # notification daemon
