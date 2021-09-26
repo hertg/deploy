@@ -1,6 +1,8 @@
 - name: ansible-setup | update ansible to latest version
   package:
-    name: ansible
+    name: 
+      - ansible
+      - rsync # required for synchronize task
     state: latest
 
 #- name: ansible setup | install galaxy requirements
