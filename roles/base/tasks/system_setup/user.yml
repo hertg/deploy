@@ -47,7 +47,7 @@
 
 - name: system-setup | user | copy user configs
   become: yes
-  become: "{{ config_username }}"
+  become_user: "{{ config_username }}"
   synchronize:
     src: userconfig/{{ item.src }}
     dest: /home/{{ config_username }}/{{ item.dest }}
