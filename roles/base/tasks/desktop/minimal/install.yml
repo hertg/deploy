@@ -22,16 +22,16 @@
 
 # todo: picom-ibhagwan-git .... not picom-jonaburg-git
 
-- name: desktop | minimal | check if compositor (picom-ibhagwan-git) is already installed
+- name: desktop | minimal | check if compositor (picom-git) is already installed
   stat:
     path: /usr/bin/picom
   register: picom_stat
 
 # https://github.com/ibhagwan/picom
-- name: desktop | minimal | install display-manager (picom-ibhagwan-git)
+- name: desktop | minimal | install display-manager (picom-git)
   become: yes
   become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm picom-ibhagwan-git
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm picom-git
   when: not picom_stat.stat.exists
 
 - name: desktop | minimal | check if display-manager (ly) is already installed
