@@ -1,7 +1,7 @@
 modkey = "Mod4"
 #workspaces = []
 tags = ["home", "chat", "surf", "media", "game", "remote", "code", "database", "graphics"]
-max_window_width = 0.4
+max_window_width = 2100
 focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
