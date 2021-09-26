@@ -46,14 +46,12 @@
     - { dir: '.config' }
 
 - name: system-setup | user | copy user configs
-  become: yes
-  become_user: "{{ config_username }}"
-  synchronize:
+  copy:
     src: userconfig/{{ item.src }}
     dest: /home/{{ config_username }}/{{ item.dest }}
-    checksum: yes
-    recursive: yes
-    times: yes # keep creation times
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    mode: preserve
   with_items:
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }
