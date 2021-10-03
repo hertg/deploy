@@ -20,6 +20,8 @@ alias grep='grep --color'
 alias vim='nvim'
 alias vi='nvim'
 
+alias apull='ansible-pull -U https://github.com/hertg/deploy'
+
 # exports
 export EDITOR=vim
 export VISUAL=vim
