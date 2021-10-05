@@ -7,6 +7,9 @@ This will automatically run the playbook called `local.yml` in the given reposit
 sudo ansible-pull -U https://github.com/hertg/deploy
 ```
 
+## Todo
+- Teamviewer: install from AUR, enable teamviewerd
+
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
  

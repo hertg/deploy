@@ -274,7 +274,7 @@ key = "s"
 
 [[keybind]]
 command = "SetLayout"
-value = "CenterMainBalancedMaxed"
+value = "CenterMainBalanced"
 modifier = ["modkey"]
 key = "m"
 
