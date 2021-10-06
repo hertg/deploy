@@ -15,7 +15,6 @@
   package:
     name:
       - feh # background
-      #- nitrogen
       - unclutter # hide cursor after timeout
       - numlockx
 

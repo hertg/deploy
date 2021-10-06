@@ -1,4 +1,5 @@
 ---
-desktop: minimal # minimal, gnome?, kde?
-wm: leftwm # leftwm, dwm?, awesome?
+desktop: minimal
+wm: leftwm
 gpu: amd
+bluetooth: yes

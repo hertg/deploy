@@ -1,0 +1,21 @@
+- name: system-setup | audio | install packages
+  package:
+    name:
+      - alsa
+      - alsa-utils
+      - pulseaudio
+      - pavucontrol
+      - pamixer
+
+- name: system-setup | audio | check if steelseries-arctis-pro-wireless already installed
+  stat:
+    path: /usr/local/bin/steelseries-arctis-pro-wireless
+  register: steelseries_stat
+
+- name: system-setup | audio | install steelseries-arctis-pro-wireless
+  when: not steelseries_stat.stat.exists
+  import_role:
+    name: install-from-git
+  vars:
+    dir_name: steelseries-arctis-pro-wireless
+    git_url: https://github.com/hertg/steelseries-arctis-pro-wireless

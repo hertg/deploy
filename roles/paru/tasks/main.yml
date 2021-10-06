@@ -1,0 +1,15 @@
+- name: join packages to single string
+  set_fact:
+    packages: "{{ package | join(' ') }}"
+
+- name: check if already installed
+  command: paru -Q {{ packages }}
+  ignore_errors: true
+  register: installed
+  changed_when: false
+
+- name: install '{{ packages }}'
+  when: installed.rc != 0 or force_update
+  become: yes
+  become_user: aur_builder
+  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm {{ packages }}

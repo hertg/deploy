@@ -12,6 +12,7 @@
     state: present
 
 - name: system-setup | locale | configure locale to '{{ config_system_locale }}' and language to '{{ config_system_language }}'
+  # todo: change to lineinfile?
   command: >
     localectl set-locale 
     LANG={{ config_system_language }} 
@@ -22,5 +23,6 @@
     LC_TELEPHONE={{ config_system_locale }}
 
 - name: system-setup | locale | configure keymap to '{{ config_system_keymap }}'
+  # todo: change to lineinfile
   command: localectl set-keymap {{ config_system_keymap }}
 

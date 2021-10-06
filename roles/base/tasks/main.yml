@@ -5,6 +5,7 @@
 
   - import_tasks: ansible_setup.yml
 
+  # paru must be installed first, so it can be used in the upcoming tasks
   - import_tasks: system_setup/aur.yml
     when: ansible_distribution == 'Archlinux'
 
@@ -15,16 +16,17 @@
   - import_tasks: system_setup/graphics.yml
   - import_tasks: system_setup/fonts.yml
   - import_tasks: system_setup/icons.yml
+  - import_tasks: system_setup/audio.yml
   - import_tasks: system_setup/power.yml
+
+  - import_tasks: system_setup/bluetooth.yml
+    when: bluetooth is defined and bluetooth == true
 
   - when: desktop is defined
     block:
 
       # MINIMAL
       - import_tasks: desktop/minimal/install.yml
-        when: desktop == 'minimal'
-      
-      - import_tasks: desktop/minimal/audio.yml
         when: desktop == 'minimal'
 
       - import_tasks: desktop/minimal/bluetooth.yml

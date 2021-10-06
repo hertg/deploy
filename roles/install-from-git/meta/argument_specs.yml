@@ -1,0 +1,13 @@
+---
+argument_specs:
+  main:
+    options:
+      dir_name:
+        type: "str"
+        required: true
+        description: "a name for the temporary directory where the repository will be checked out (eg. 'paru')"
+
+      git_url:
+        type: "str"
+        required: true
+        description: "url to the repository to checkout (eg. 'https://aur.archlinux.org/paru.git')"

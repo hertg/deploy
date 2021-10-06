@@ -2,8 +2,14 @@
   package:
     name:
       - libsecret
-      - seahorse
+      - seahorse # passwords and keys
       - ufw
 
+- name: software | security | check if ufw is enabled
+  command: ufw status
+  register: ufw_status
+  changed_when: false
+
 - name: software | security | enable ufw
+  when: "'inactive' in ufw_status.stdout"
   command: ufw enable

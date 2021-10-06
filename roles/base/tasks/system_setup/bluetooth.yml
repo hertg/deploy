@@ -1,11 +1,9 @@
-- name: system-setup | bluetooth | install packages
+- name: system-setup | bluetooth | install software
   package:
-    name:
-      - alsa
-      - alsa-utils
-      - pulseaudio
-      - pavucontrol
-      - pamixer
+    name: 
+      - bluez
+      - bluez-utils
+      - blueman
       - pulseaudio-bluetooth
 
 - name: system-setup | bluetooth | start service

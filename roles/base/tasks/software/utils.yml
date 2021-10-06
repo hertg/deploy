@@ -54,5 +54,5 @@
   become: yes
   become_user: "{{ config_username }}"
   shell: 'nvim +PlugInstall +qa --headless'
-  when: not plugin_manager_stat.stat.exists
+  # todo: only when neovim plugin list has changed
   

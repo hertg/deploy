@@ -7,6 +7,35 @@ This will automatically run the playbook called `local.yml` in the given reposit
 sudo ansible-pull -U https://github.com/hertg/deploy
 ```
 
+## Local
+Execute the playbook locally.
+```
+sudo ansible-playbook -c local -i localhost, local.yml
+```
+
+## Custom Roles
+### Install with paru (AUR)
+```yml
+- name: install from aur
+  import_role:
+    name: paru
+  vars:
+    force_update: yes # optional -> default: no
+    package:
+      - nerd-fonts-hack
+      - ttf-apple-emoji
+```
+
+### Install from git
+```yml
+- name: install from git repo and run 'makepkg ...'
+  import_role:
+    name: install-from-git
+  vars:
+    dir_name: steelseries-arctis-pro-wireless
+    git_url: https://github.com/hertg/steelseries-arctis-pro-wireless
+```
+
 ## Todo
 - Teamviewer: install from AUR, enable teamviewerd
 

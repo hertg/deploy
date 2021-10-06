@@ -1,0 +1,23 @@
+- name: install from git | checkout
+  ansible.builtin.git:
+    repo: '{{ git_url }}'
+    dest: /tmp/{{ dir_name }}
+
+- name: system-setup | aur | change ownership of paru repository
+  file:
+    path: /tmp/{{ dir_name }}
+    state: directory
+    owner: aur_builder
+    recurse: yes
+
+- name: system-setup | aur | install paru (AUR helper)
+  become: yes
+  become_user: aur_builder
+  command: makepkg --syncdeps --install --noconfirm
+  args:
+    chdir: /tmp/{{ dir_name }}
+
+- name: system-setup | aur | change ownership of paru repository
+  file:
+    path: /tmp/{{ dir_name }}
+    state: absent

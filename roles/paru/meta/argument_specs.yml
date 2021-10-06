@@ -1,0 +1,14 @@
+---
+argument_specs:
+  main:
+    options:
+      package:
+        type: "list"
+        elements: "str"
+        required: true
+        description: "a list of packages to install with paru"
+
+      force_update:
+        type: "bool"
+        required: true
+        description: "whether to always force udpate the package"
