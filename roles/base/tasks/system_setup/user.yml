@@ -29,6 +29,7 @@
 - name: system-setup | user | create user '{{ config_username }}'
   user:
     name: "{{ config_username }}"
+    append: yes # add user to groups, don't remove from others
     groups: 
       - "{{ config_username }}"
       - wheel

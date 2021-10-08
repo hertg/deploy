@@ -38,6 +38,7 @@ sudo ansible-playbook -c local -i localhost, local.yml
 
 ## Todo
 - Teamviewer: install from AUR, enable teamviewerd
+- KVM / VirtManager (usermod -aG libvirt <user>)
 
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
