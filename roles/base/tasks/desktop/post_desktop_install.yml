@@ -1,5 +1,6 @@
 - name: desktop | post-install | configure X11 keymap to '{{ config_system_keymap_short }}' and add caps:swapescape
   command: localectl set-x11-keymap {{ config_system_keymap_short }} pc105 "" caps:swapescape
+  # todo: update via lineinfile
 
 - name: desktop | post-install | copy X11 configs
   copy:

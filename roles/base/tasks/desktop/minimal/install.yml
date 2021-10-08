@@ -18,49 +18,28 @@
       - unclutter # hide cursor after timeout
       - numlockx
 
-
-# todo: picom-ibhagwan-git .... not picom-jonaburg-git
-
-- name: desktop | minimal | check if compositor (picom-git) is already installed
-  stat:
-    path: /usr/bin/picom
-  register: picom_stat
-
-# https://github.com/ibhagwan/picom
-- name: desktop | minimal | install display-manager (picom-git)
-  become: yes
-  become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm picom-git
-  when: not picom_stat.stat.exists
-
-- name: desktop | minimal | check if display-manager (ly) is already installed
-  stat:
-    path: /usr/bin/ly
-  register: ly_stat
+- name: desktop | minimal | install compositor (picom)
+  import_role:
+    name: paru
+  vars:
+    package:
+      - picom-git
 
 - name: desktop | minimal | install display-manager (ly)
-  become: yes
-  become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm ly
-  when: not ly_stat.stat.exists
-
-#- name: desktop | minimal | disable (old) display-manager (lightdm)
-#  systemd:
-#    name: lightdm
-#    enabled: no
+  import_role:
+    name: paru
+  vars:
+    package:
+      - ly
 
 - name: desktop | minimal | enable display-manager (ly)
   systemd:
     name: ly
     enabled: yes
 
-- name: desktop | minimal | check if window-manager (leftwm) is already installed
-  stat:
-    path: /usr/bin/leftwm
-  register: leftwm_stat
-
 - name: desktop | minimal | install window-manager (leftwm)
-  become: yes
-  become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm leftwm-git
-  when: not leftwm_stat.stat.exists
+  import_role:
+    name: paru
+  vars:
+    package:
+      - leftwm-git

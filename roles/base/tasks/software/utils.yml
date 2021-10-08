@@ -26,16 +26,12 @@
       - light # control screen backlight
       - playerctl # control media playback
 
-- name: software | utils | check if macchina is already installed
-  stat:
-    path: /usr/bin/macchina
-  register: macchina_stat
-
 - name: software | utils | install fetch (macchina)
-  become: yes
-  become_user: aur_builder
-  command: paru -S --cleanafter --skipreview --noprovides --nouseask --noconfirm macchina
-  when: not macchina_stat.stat.exists
+  import_role:
+    name: paru
+  vars:
+    package:
+      - macchina
 
 - name: software | utils | check if plugin manager for neovim is already installed
   become: yes

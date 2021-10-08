@@ -6,17 +6,6 @@
       - xfce4
       - xfce4-goodies
 
-#- name: Install LightDM
-#  package:
-#    name:
-#      - lightdm
-#      - lightdm-gtk-greeter
-
-#- name: Enable LightDM
-#  systemd:
-#    name: lightdm
-#    enabled: yes
-
 - name: desktop | minimal | check if display-manager (ly) is already installed
   stat:
     path: /usr/bin/ly

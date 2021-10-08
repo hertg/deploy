@@ -28,9 +28,6 @@
       # MINIMAL
       - import_tasks: desktop/minimal/install.yml
         when: desktop == 'minimal'
-
-      - import_tasks: desktop/minimal/bluetooth.yml
-        when: desktop == 'minimal'
         
       - import_tasks: desktop/minimal/network.yml
         when: desktop == 'minimal'
