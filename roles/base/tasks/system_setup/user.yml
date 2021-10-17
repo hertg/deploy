@@ -73,3 +73,4 @@
     - { src: 'macchina', dest: '.config/'}
     - { src: 'alacritty', dest: '.config/'}
     - { src: 'rofi', dest: '.config/'}
+    - { src: 'bottom', dest: '.config/'}
