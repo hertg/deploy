@@ -4,6 +4,7 @@ tags = ["home", "chat", "surf", "media", "game", "remote", "code", "database", "
 max_window_width = 2200
 focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
+disable_current_tag_swap = true
 
 layouts = [
     "CenterMainBalanced",
