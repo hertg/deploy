@@ -5,6 +5,7 @@ max_window_width = 2200
 focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 disable_current_tag_swap = true
+layout_mode = "Tag"
 
 layouts = [
     "CenterMainBalanced",
@@ -264,6 +265,11 @@ key = "space"
 [[keybind]]
 command = "ToggleScratchPad"
 value = "Alacritty" # Name set for the scratchpad
+modifier = ["modkey", "Control"]
+key = "s"
+
+[[keybind]]
+command = "ToggleSticky"
 modifier = ["modkey"]
 key = "s"
 
