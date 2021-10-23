@@ -1,0 +1,8 @@
+- name: software | masterpdf-editor | install pdf editor
+  import_role:
+    name: paru
+  vars:
+    package:
+      - masterpdfeditor-free
+
+

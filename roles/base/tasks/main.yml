@@ -18,6 +18,8 @@
   - import_tasks: system_setup/icons.yml
   - import_tasks: system_setup/audio.yml
   - import_tasks: system_setup/power.yml
+  - import_tasks: system_setup/utils.yml
+  - import_tasks: system_setup/multimedia.yml
 
   - import_tasks: system_setup/bluetooth.yml
     when: bluetooth is defined and bluetooth == true
@@ -45,10 +47,11 @@
 
       # Desktop Post-Install
       - import_tasks: desktop/post_desktop_install.yml
-      
-  - import_tasks: software/utils.yml
-  - import_tasks: software/multimedia.yml
-  - import_tasks: software/browser.yml
+  
+  
+  # optional software
+  - import_tasks: software/firefox.yml
+  - import_tasks: software/masterpdf_editor.yml
 
   # post install
   - import_tasks: post_install.yml

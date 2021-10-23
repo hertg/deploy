@@ -1,0 +1,7 @@
+- name: system-setup | multimedia | install file viewers
+  package:
+    name:
+      - sxiv # image viewer
+      - llpp # document viewer
+      - ffmpeg # video
+      - maim # screenshot

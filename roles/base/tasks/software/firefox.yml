@@ -1,4 +1,4 @@
-- name: software | browser | install firefox
+- name: software | firefox | install firefox
   package:
     name:
       - firefox
