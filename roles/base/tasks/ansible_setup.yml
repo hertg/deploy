@@ -2,7 +2,12 @@
   package:
     name: 
       - ansible
-      - rsync # required for synchronize task
+    state: latest
+
+- name: ansible-setup | install rsync (may be used for 'synchronize' tasks)
+  package:
+    name: 
+      - rsync
     state: latest
 
 #- name: ansible setup | install galaxy requirements
