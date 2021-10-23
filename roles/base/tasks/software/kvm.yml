@@ -1,11 +1,12 @@
 - name: software | kvm | install packages
-  # ebtables? vde2? openbsp-netcat? iptables?
+  # vde2? openbsp-netcat? iptables?
   package:
     name:
       - qemu
       - libvirt
       - dnsmasq
       - bridge-utils
+      - ebtables
       - ovmf # uefi support
       - virt-manager
       - virt-viewer
@@ -47,6 +48,10 @@
   register: virsh_net_status
   changed_when: false
 
-- name: software | kvm | autostart 'default' network
+- name: software | kvm | always autostart 'default' network
   when: virsh_net_status.stdout | regex_search("Autostart:\s*no")
   command: virsh net-autostart default
+
+- name: software | kvm | start 'default' network
+  when: virsh_net_status.stdout | regex_search("Active:\s*no")
+  command: virsh net-start default
