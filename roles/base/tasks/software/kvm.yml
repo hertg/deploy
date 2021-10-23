@@ -6,7 +6,7 @@
       - libvirt
       - dnsmasq
       - bridge-utils
-      - ebtables
+      - iptables
       - ovmf # uefi support
       - virt-manager
       - virt-viewer
