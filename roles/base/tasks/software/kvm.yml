@@ -6,10 +6,22 @@
       - libvirt
       - dnsmasq
       - bridge-utils
-      - iptables
       - ovmf # uefi support
       - virt-manager
       - virt-viewer
+
+- name: software | kvm | check if 'ebtables' is installed
+  command: pacman -Q ebtables
+  changed_when: false
+  ignore_errors: yes
+  register: ebtables_stat
+
+- name: software | kvm | install ebtables
+  # The '--ask 4' tells pacman to forcefully install a conflicting package.
+  # ebtables may conflict with an already installed iptables, we are fine replacing iptables with iptables-nft.
+  # Credit: https://unix.stackexchange.com/a/584001/351554
+  when: ebtables_stat.rc != 0
+  command: pacman -S iptables-nft --ask 4
 
 - name: software | kvm | set unix_sock_group to 'libvirt'
   lineinfile:
