@@ -2,3 +2,5 @@
 desktop: gnome
 gpu: nvidia
 bluetooth: yes
+
+touchpad: yes

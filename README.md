@@ -2,6 +2,8 @@
 Ansible Tasks to deploy Arch Linux.
 
 ## Usage
+> Consider updating the system first before executing the playbook.
+
 This will automatically run the playbook called `local.yml` in the given repository.
 ```
 sudo ansible-pull -U https://github.com/hertg/deploy
@@ -10,7 +12,7 @@ sudo ansible-pull -U https://github.com/hertg/deploy
 ## Local
 Execute the playbook locally.
 ```
-sudo ansible-playbook -c local -i localhost, local.yml
+sudo ansible-playbook -c local -i $(hostname), local.yml
 ```
 
 ## Custom Roles

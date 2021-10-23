@@ -25,6 +25,7 @@
       - ueberzug # console image preview
       - light # control screen backlight
       - playerctl # control media playback
+      - solaar # logitech device manager
 
 - name: software | utils | install fetch (macchina)
   import_role:

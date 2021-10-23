@@ -1,3 +1,6 @@
+# Specifies the network interface to use for the LocalIP readout
+#interface = "wlan0"
+
 # Disables color.
 no_color = false
 
@@ -17,14 +20,21 @@ no_box = false
 no_ascii = false
 
 # Specify your own ASCII art from a text file (supports ANSI escape codes)
-custom_ascii = "/home/michael/.config/macchina/arch.ascii"
-# todo: username is hardcoded
+{% if macchina_ascii is defined %}
+custom_ascii = "/home/{{ config_username }}/.config/macchina/{{ macchina_ascii }}" # todo: username is hardcoded
+{% else %}
+custom_ascii = "/home/{{ config_username }}/.config/macchina/arch.ascii" # todo: username is hardcoded
+{% endif %}
 
 # Prefer small ASCII variant.
 small_ascii = false
 
 # Displays a palette of your active colorscheme
-palette = false
+# Accepted values (case-sensitive):
+#   - Light
+#   - Dark
+#   - Full
+#palette = "Full"
 
 # Turns data into bars for specific readouts
 bar = false
@@ -70,7 +80,7 @@ long_shell = false
 # current_shell = false
 
 # Specify the title of the box
-#box_title = " System "
+box_title = " System "
 
 # Specify the horizontal inner margin value of the box surrounding system information.
 box_inner_margin_x = 1
@@ -94,30 +104,6 @@ box_inner_margin_y = 0
 # and set theme = "foobar" (case-sensitive)
 theme = "Helium"
 
-# Hides the specified readouts.
-# Conflicts with: show_only
-# Accepted values (case-sensitive):
-#   - Host
-#   - Machine
-#   - Kernel
-#   - Distribution
-#   - OperatingSystem
-#   - DesktopEnvironment
-#   - WindowManager
-#   - Resolution
-#   - Packages
-#   - LocalIP
-#   - Terminal
-#   - Shell
-#   - Uptime
-#   - Processor
-#   - ProcessorLoad
-#   - Memory
-#   - Battery
-# Example:
-#   hide = ["Battery", "Memory", ...]
-#hide = []
-
 # Displays only the specified readouts.
 # Conflicts with: hide
 # Accepted values (case-sensitive):
@@ -129,6 +115,7 @@ theme = "Helium"
 #   - DesktopEnvironment
 #   - WindowManager
 #   - Resolution
+#   - Backlight [Linux/NetBSD only]
 #   - Packages
 #   - LocalIP
 #   - Terminal
@@ -138,8 +125,4 @@ theme = "Helium"
 #   - ProcessorLoad
 #   - Memory
 #   - Battery
-# Example:
-#   show_only = ["Battery", "Memory", ...]
-#show_only = ["Kernel","Packages","LocalIP","Uptime","Processor","ProcessorLoad","Memory"]
-show_only = ["Kernel", "Processor","Packages","Uptime","LocalIP"]
-
+show_only = ["Kernel", "Processor", "Terminal", "Packages","Uptime"]

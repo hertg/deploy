@@ -3,3 +3,5 @@ desktop: minimal
 wm: leftwm
 gpu: amd
 bluetooth: yes
+
+kvm: yes
