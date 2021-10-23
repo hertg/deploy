@@ -5,3 +5,4 @@ gpu: intel
 bluetooth: yes
 
 touchpad: yes
+macchina_ascii: inf.ascii

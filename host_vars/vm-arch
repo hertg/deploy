@@ -2,3 +2,5 @@
 desktop: minimal
 wm: leftwm
 bluetooth: no
+
+macchina_ascii: inf.ascii

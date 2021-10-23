@@ -75,3 +75,11 @@
     - { src: 'rofi', dest: '.config/'}
     - { src: 'bottom', dest: '.config/'}
   register: userconfig_stat
+
+- name: system-setup | user | copy user configs from template
+  template:
+    src: templates/macchina.toml.j2
+    dest: /home/{{ config_username }}/.config/macchina/macchina.toml
+    mode: 0700
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
