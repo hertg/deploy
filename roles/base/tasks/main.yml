@@ -51,7 +51,12 @@
   
   # optional software
   - import_tasks: software/firefox.yml
+
   - import_tasks: software/masterpdf_editor.yml
+    when: masterpdfeditor is defined and masterpdfeditor == true
+
+  - import_tasks: software/kvm.yml
+    when: kvm is defined and kvm == true
 
   # post install
   - import_tasks: post_install.yml

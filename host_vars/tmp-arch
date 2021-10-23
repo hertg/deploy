@@ -6,3 +6,4 @@ bluetooth: yes
 
 touchpad: yes
 macchina_ascii: inf.ascii
+kvm: yes

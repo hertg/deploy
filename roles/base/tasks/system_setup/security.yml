@@ -4,6 +4,7 @@
       - libsecret
       - seahorse # passwords and keys
       - ufw
+      - gpa # graphical GPG key manager
 
 - name: software | security | check if ufw is enabled
   command: ufw status
