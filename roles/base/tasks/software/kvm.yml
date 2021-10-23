@@ -10,12 +10,6 @@
       - virt-manager
       - virt-viewer
 
-- name: software | kvm | start and enable libvirt daemon
-  systemd:
-    name: libvirtd
-    enabled: yes
-    state: started
-
 - name: software | kvm | set unix_sock_group to 'libvirt'
   lineinfile:
     dest: /etc/libvirt/libvirtd.conf
@@ -42,7 +36,17 @@
     groups: 
       - libvirt
 
-- name: software | kvm | restart libvirt daemon
+- name: software | kvm | start and enable libvirt daemon
   systemd:
     name: libvirtd
-    state: restarted
+    enabled: yes
+    state: started
+
+- name: software | kvm | check if default network is autostarted
+  command: virsh net-info default
+  register: virsh_net_status
+  changed_when: false
+
+- name: software | kvm | autostart 'default' network
+  when: virsh_net_status.stdout | regex_search("Autostart:\s*no")
+  command: virsh net-autostart default
