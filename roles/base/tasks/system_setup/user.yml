@@ -74,3 +74,4 @@
     - { src: 'alacritty', dest: '.config/'}
     - { src: 'rofi', dest: '.config/'}
     - { src: 'bottom', dest: '.config/'}
+  register: userconfig_stat

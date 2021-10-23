@@ -37,7 +37,13 @@
     name: ly
     enabled: yes
 
+- name: desktop | minimal | check if leftwm is installed from source
+  stat:
+    path: /usr/local/bin/leftwm
+  register: leftwm_stat
+
 - name: desktop | minimal | install window-manager (leftwm)
+  when: not leftwm_stat.stat.exists
   import_role:
     name: paru
   vars:
