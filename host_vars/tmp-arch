@@ -3,3 +3,5 @@ desktop: minimal
 wm: leftwm
 gpu: intel
 bluetooth: yes
+
+touchpad: yes
