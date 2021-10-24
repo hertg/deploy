@@ -47,12 +47,12 @@
   shell: curl -fLo /home/{{ config_username }}/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   when: not plugin_manager_stat.stat.exists
 
-#- name: system-setup | utils | fix permissions for users '.local' directory
-#  file:
-#    dest: /home/{{ config_username }}/.local
-#    owner: "{{ config_username }}"
-#    group: "{{ config_username }}"
-#    recurse: yes
+- name: system-setup | utils | fix permissions for users '.local' directory
+  file:
+    dest: /home/{{ config_username }}/.local/share/nvim
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    recurse: yes
 
 - name: system-setup | utils | install plugins for neovim (if nvim configs have changed)
   when: userconfig_stat.changed and userconfig_stat.results | selectattr("item.src", "equalto", "nvim") | map(attribute="changed")
