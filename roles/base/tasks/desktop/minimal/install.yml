@@ -49,3 +49,16 @@
   vars:
     package:
       - leftwm-git
+
+#- name: desktop | minimal | install leftwm-theme-git
+#  when: not leftwm_stat.stat.exists
+#  import_role:
+#    name: paru
+#  vars:
+#    package:
+#      - leftwm-theme-git
+
+- name: desktop | minimal | install polybar
+  package:
+    name:
+      - polybar

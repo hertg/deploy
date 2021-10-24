@@ -83,3 +83,11 @@
     mode: 0700
     owner: "{{ config_username }}"
     group: "{{ config_username }}"
+
+- name: system-setup | user | create 'current' symlink for leftwm theme
+  file:
+    src: /home/{{ config_username }}/.config/leftwm/themes/hertg
+    dest: /home/{{ config_username }}/.config/leftwm/themes/current
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    state: link
