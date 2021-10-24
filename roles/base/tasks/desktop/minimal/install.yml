@@ -59,6 +59,8 @@
 #      - leftwm-theme-git
 
 - name: desktop | minimal | install polybar
-  package:
-    name:
+  import_role:
+    name: paru
+  vars:
+    package:
       - polybar
