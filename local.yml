@@ -7,16 +7,8 @@
       pacman: update_cache=yes
       changed_when: False
       when: ansible_distribution == "Archlinux"
-    
-    # todo: non arch-based?
 
 - hosts: all
-  tags: base
   become: true
   roles:
     - base
-
-#- hosts: personal
-#  become: true
-#  roles:
-#    - personal

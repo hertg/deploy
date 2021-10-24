@@ -3,7 +3,21 @@ desktop: minimal
 wm: leftwm
 gpu: intel
 bluetooth: yes
-
 touchpad: yes
 macchina_ascii: inf.ascii
-kvm: yes
+
+# software
+brave: yes
+#dbeaver: yes
+docker: yes
+firefox: yes
+intellij: yes
+jdk: yes
+#kvm: yes
+netextender: yes
+nodejs: yes
+remmina: yes
+sbt: yes
+spotify: yes
+vscode: yes
+wompiler: yes
