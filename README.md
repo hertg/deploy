@@ -29,26 +29,26 @@ kvm: yes
 ```
 
 ### List of available software
-- [] android
-- [] brave
-- [] dbeaver
-- [] discord
-- [] docker
-- [] firefox
-- [] intellij
-- [] jdk
-- [] kvm
-- [] masterpdfeditor
-- [] netextender
-- [] nodejs
-- [] obs
-- [] odbc
-- [] remmina
-- [] sbt
-- [] spotify
-- [] steam
-- [] vscode
-- [] wompiler
+- [ ] android
+- [ ] brave
+- [ ] dbeaver
+- [ ] discord
+- [ ] docker
+- [ ] firefox
+- [ ] intellij
+- [ ] jdk
+- [ ] kvm
+- [ ] masterpdfeditor
+- [ ] netextender
+- [ ] nodejs
+- [ ] obs
+- [ ] odbc
+- [ ] remmina
+- [ ] sbt
+- [ ] spotify
+- [ ] steam
+- [ ] vscode
+- [ ] wompiler
 
 ## Custom Roles
 ### Install with paru (AUR)
