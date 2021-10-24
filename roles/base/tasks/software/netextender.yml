@@ -1,3 +1,5 @@
+# Resource: https://tldp.org/HOWTO/PPP-HOWTO/root.html
+
 - name: software | netextender | install netextender
   import_role:
     name: paru
@@ -5,9 +7,20 @@
     package:
       - netextender
 
-- name: software | netextender | create user group 'netextender'
+- name: software | netextender | create user group 'ppp'
   group:
-    name: netextender
+    name: ppp
     state: present
 
-# todo: /usr/sbin/pppd permission
+- name: software | netextender | add user '{{ config_username }}' to 'ppp' group
+  user:
+    name: "{{ config_username }}"
+    append: yes # add user to groups, don't remove from others
+    groups: 
+      - ppp
+
+- name: software | netextender | change ownership of '/usr/sbin/pppd'
+  file:
+    path: /usr/sbin/pppd
+    group: ppp
+    mode: 04750 # -rwsr-x---

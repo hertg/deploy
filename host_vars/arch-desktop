@@ -7,3 +7,4 @@ bluetooth: yes
 
 kvm: yes
 steam: yes
+netextender: yes
