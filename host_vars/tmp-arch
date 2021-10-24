@@ -13,7 +13,7 @@ docker: yes
 firefox: yes
 intellij: yes
 jdk: yes
-#kvm: yes
+kvm: yes
 netextender: yes
 nodejs: yes
 remmina: yes

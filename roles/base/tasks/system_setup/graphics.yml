@@ -25,7 +25,9 @@
 - name: system-setup | graphics | install intel drivers
   package:
     name:
+      - mesa
       - xf86-video-intel
+      - vulkan-intel
   when:
     - ansible_distribution == "Archlinux"
     - gpu is defined
