@@ -7,3 +7,6 @@
 # https://bugzilla.mozilla.org/show_bug.cgi?id=686747#c40
 # if window resolution errors occur in a tiling window manager,
 # the config 'privacy.resistFingerprinting' should be set to 'true'
+#
+# Change Firefox to use OpenGL for rendering
+# https://wiki.archlinux.org/index.php/Firefox/Tweaks#Enable_OpenGL_compositor

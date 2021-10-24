@@ -1,0 +1,7 @@
+- name: software | intellij | install IntelliJ and its JRE
+  import_role:
+    name: paru
+  vars:
+    package:
+      - intellij-idea-ultimate-edition
+      - intellij-idea-ultimate-edition-jre

@@ -1,0 +1,6 @@
+- name: software | remmina | install remmina, freerdp
+  # freerdp is required to connect via RDP
+  package:
+    name:
+      - remmina
+      - freerdp

@@ -1,3 +1,5 @@
+# Credit: https://computingforgeeks.com/complete-installation-of-kvmqemu-and-virt-manager-on-arch-linux-and-manjaro/
+
 - name: software | kvm | install packages
   # vde2? openbsp-netcat? iptables?
   package:
@@ -48,6 +50,12 @@
     append: yes # add user to groups, don't remove from others
     groups: 
       - libvirt
+
+# todo (?)
+# enable nested virtualization
+# sudo modprobe -r kvm_intel
+# sudo modprobe kvm_intel nested=1
+# making it permanent -> echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
 
 - name: software | kvm | start and enable libvirt daemon
   systemd:

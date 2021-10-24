@@ -52,11 +52,62 @@
   # optional software
   - import_tasks: software/firefox.yml
 
+  - import_tasks: software/brave.yml
+    when: brave is defined and brave == true
+
   - import_tasks: software/masterpdf_editor.yml
     when: masterpdfeditor is defined and masterpdfeditor == true
 
   - import_tasks: software/kvm.yml
     when: kvm is defined and kvm == true
+
+  - import_tasks: software/discord.yml
+    when: discord is defined and discord == true
+
+  - import_tasks: software/vscode.yml
+    when: vscode is defined and vscode == true
+  
+  - import_tasks: software/obs.yml
+    when: obs is defined and obs == true
+
+  - import_tasks: software/intellij.yml
+    when: intellij is defined and intellij == true
+  
+  - import_tasks: software/nodejs.yml
+    when: nodejs is defined and nodejs == true
+  
+  - import_tasks: software/odbc.yml
+    when: odbc is defined and odbc == true
+  
+  - import_tasks: software/wompiler.yml
+    when: wompiler is defined and wompiler == true
+
+  - import_tasks: software/sbt.yml
+    when: sbt is defined and sbt == true
+
+  - import_tasks: software/android.yml
+    when: android is defined and android == true
+  
+  - import_tasks: software/netextender.yml
+    when: netextender is defined and netextender == true
+
+  - import_tasks: software/remmina.yml
+    when: remmina is defined and remmina == true
+
+  - import_tasks: software/jdk.yml
+    when: jdk is defined and jdk == true
+
+  - import_tasks: software/docker.yml
+    when: docker is defined and docker == true
+  
+  - import_tasks: software/dbeaver.yml
+    when: dbeaver is defined and dbeaver == true
+  
+  - import_tasks: software/spotify.yml
+    when: spotify is defined and spotify == true
+
+  - import_tasks: software/steam.yml
+    when: steam is defined and steam == true
 
   # post install
   - import_tasks: post_install.yml

@@ -1,0 +1,13 @@
+- name: software | netextender | install netextender
+  import_role:
+    name: paru
+  vars:
+    package:
+      - netextender
+
+- name: software | netextender | create user group 'netextender'
+  group:
+    name: netextender
+    state: present
+
+# todo: /usr/sbin/pppd permission

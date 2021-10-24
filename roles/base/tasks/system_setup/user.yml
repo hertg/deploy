@@ -36,7 +36,7 @@
     state: present
     create_home: yes
 
-- name: system-setup | user | create config directory for user '{{ config_username }}'
+- name: system-setup | user | create directories for user '{{ config_username }}'
   file:
     path: /home/{{ config_username }}/{{ item.dir }}
     state: directory
@@ -45,6 +45,7 @@
     mode: 0700
   with_items:
     - { dir: '.config' }
+    - { dir: '.local/share' }
 
 - name: system-setup | user | copy user configs
   copy:

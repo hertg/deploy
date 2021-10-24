@@ -1,0 +1,4 @@
+- name: software | docker | install docker
+  package:
+    name:
+      - docker

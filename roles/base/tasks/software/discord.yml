@@ -1,0 +1,6 @@
+- name: software | discord | install discord
+  import_role:
+    name: paru
+  vars:
+    package:
+      - discord_arch_electron

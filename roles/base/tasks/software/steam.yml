@@ -1,0 +1,57 @@
+# Resource: https://wiki.archlinux.org/index.php/steam
+
+#- name: software | steam | enable multilib repository
+#  blockinfile:
+#    path: /etc/pacman.conf
+#    block: |
+#      [multilib]
+#      Include = /etc/pacman.d/mirrorlist
+#    state: present
+
+- name: software | steam | uncomment multilib repository
+  replace:
+    path: /etc/pacman.conf
+    regexp: |
+      #\[multilib\]
+      #Include(.*)
+    replace: |
+      [multilib]
+      Include\1
+    backup: yes
+
+- name: software | steam | update package cache
+  pacman: update_cache=yes
+  changed_when: False
+
+- name: software | steam | install OpenGL drivers (AMD)
+  package:
+    name:
+      - lib32-mesa
+  when:
+    - ansible_distribution == "Archlinux"
+    - gpu is defined
+    - gpu == "amd" or gpu == "intel"
+
+- name: software | steam | install OpenGL drivers (NVIDIA)
+  package:
+    name:
+      - lib32-nvidia-utils
+  when:
+    - ansible_distribution == "Archlinux"
+    - gpu is defined
+    - gpu == "nvidia"
+
+- name: software | steam | generate locale for 'en_US.UTF-8'
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: software | steam | install 'ttf-liberation' fonts
+  package:
+    name:
+      - ttf-liberation
+
+- name: software | steam | install steam
+  package:
+    name:
+      - steam

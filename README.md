@@ -1,19 +1,54 @@
 # deploy
-Ansible Tasks to deploy Arch Linux.
-
-## Usage
 > Consider updating the system first before executing the playbook.
 
-This will automatically run the playbook called `local.yml` in the given repository.
-```
-sudo ansible-pull -U https://github.com/hertg/deploy
+## Usage
+
+To run the ansible script locally, after cloning the repository:
+```sh
+# this is just a shorthand for 'make local' which is:
+# sudo ansible-playbook -c local -i $(HOSTNAME), local.yml
+
+make
 ```
 
-## Local
-Execute the playbook locally.
+To run the ansible script from Github directly:
+```sh
+# this is just a shorthand for:
+# sudo ansible-pull -U https://github.com/hertg/deploy
+
+make remote
 ```
-sudo ansible-playbook -c local -i $(hostname), local.yml
+
+## Optional Software
+Optional software is not installed automatically, it has to be specified via host variables. 
+
+*Example*
+```yaml
+docker: yes
+kvm: yes
 ```
+
+### List of available software
+- [] android
+- [] brave
+- [] dbeaver
+- [] discord
+- [] docker
+- [] firefox
+- [] intellij
+- [] jdk
+- [] kvm
+- [] masterpdfeditor
+- [] netextender
+- [] nodejs
+- [] obs
+- [] odbc
+- [] remmina
+- [] sbt
+- [] spotify
+- [] steam
+- [] vscode
+- [] wompiler
 
 ## Custom Roles
 ### Install with paru (AUR)
@@ -40,7 +75,6 @@ sudo ansible-playbook -c local -i $(hostname), local.yml
 
 ## Todo
 - Teamviewer: install from AUR, enable teamviewerd
-- KVM / VirtManager (usermod -aG libvirt <user>)
 
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>

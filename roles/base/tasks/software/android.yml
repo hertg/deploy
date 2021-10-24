@@ -1,0 +1,5 @@
+- name: software | android | install android tools
+  package:
+    name:
+      - android-tools
+      - android-file-transfer # mount android phones

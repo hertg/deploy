@@ -1,0 +1,7 @@
+- name: software | vscode | install code
+  package:
+    name:
+      - code
+
+# todo: swapescape
+# -> in settings, change keyboard.dispatch to "keyCode" for capslock/escape swap to work

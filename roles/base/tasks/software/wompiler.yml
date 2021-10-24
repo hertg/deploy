@@ -1,0 +1,12 @@
+- name: software | wompiler | install wompiler
+  community.general.npm:
+    name: "@informaticon/web.compiler"
+    global: yes
+    state: present
+
+- name: software | wompiler | install watchman (required for work)
+  import_role:
+    name: paru
+  vars:
+    package:
+      - watchman

@@ -1,4 +1,4 @@
-- name: software | utils | basic system utilities
+- name: system-setup | utils | basic system utilities
   package:
     name:
       - git
@@ -13,7 +13,7 @@
       - lzip
       - dkms # dynamic kernel modules
 
-- name: software | utils | install git, lsd, openssh, man, neovim, etc
+- name: system-setup | utils | install git, lsd, openssh, man, neovim, etc
   package:
     name:
       - lsd # 'ls' alternative
@@ -27,34 +27,34 @@
       - playerctl # control media playback
       - solaar # logitech device manager
 
-- name: software | utils | install fetch (macchina)
+- name: system-setup | utils | install fetch (macchina)
   import_role:
     name: paru
   vars:
     package:
       - macchina
 
-- name: software | utils | check if plugin manager for neovim is already installed
+- name: system-setup | utils | check if plugin manager for neovim is already installed
   become: yes
   become_user: "{{ config_username }}"
   stat:
     path: /home/{{ config_username }}/.local/share/nvim/site/autoload/plug.vim
   register: plugin_manager_stat
 
-- name: software | utils | install plugin manager for neovim
+- name: system-setup | utils | install plugin manager for neovim
   become: yes
   become_user: "{{ config_username }}"
   shell: curl -fLo /home/{{ config_username }}/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   when: not plugin_manager_stat.stat.exists
 
-- name: software | utils | fix permissions for users '.local' directory
-  file:
-    dest: /home/{{ config_username }}/.local
-    owner: "{{ config_username }}"
-    group: "{{ config_username }}"
-    recurse: yes
+#- name: system-setup | utils | fix permissions for users '.local' directory
+#  file:
+#    dest: /home/{{ config_username }}/.local
+#    owner: "{{ config_username }}"
+#    group: "{{ config_username }}"
+#    recurse: yes
 
-- name: software | utils | install plugins for neovim (if nvim configs have changed)
+- name: system-setup | utils | install plugins for neovim (if nvim configs have changed)
   when: userconfig_stat.changed and userconfig_stat.results | selectattr("item.src", "equalto", "nvim") | map(attribute="changed")
   become: yes
   become_user: "{{ config_username }}"

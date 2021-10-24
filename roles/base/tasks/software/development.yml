@@ -1,5 +1,0 @@
-#- name: software | development | install IDEs
-#  package:
-#    name:
-#      - code
-#    state: latest

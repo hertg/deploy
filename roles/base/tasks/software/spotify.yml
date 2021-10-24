@@ -1,0 +1,8 @@
+- name: software | spotify | install spotify
+  import_role:
+    name: paru
+  vars:
+    package:
+      - spotify
+
+# todo: spotify tui? (spt)

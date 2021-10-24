@@ -1,0 +1,8 @@
+- name: software | jdk | install JDK
+  # todo: make versions configurable?
+  import_role:
+    name: paru
+  vars:
+    package:
+      - amazon-corretto-8
+      - amazon-corretto-11

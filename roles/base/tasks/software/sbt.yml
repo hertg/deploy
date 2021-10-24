@@ -1,0 +1,4 @@
+- name: software | sbt | install sbt
+  package:
+    name:
+      - sbt

@@ -1,0 +1,4 @@
+- name: software | dbeaver | install dbeaver
+  package:
+    name:
+      - dbeaver

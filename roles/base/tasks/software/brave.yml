@@ -1,0 +1,6 @@
+- name: software | brave | install brave
+  import_role:
+    name: paru
+  vars:
+    package:
+      - brave-bin
