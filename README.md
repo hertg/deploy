@@ -165,4 +165,8 @@ swapoff -a
 reboot
 ```
 
+```
+systemctl enable --now NetworkManager
+nmtui
+```
 </details>

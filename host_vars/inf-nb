@@ -1,0 +1,25 @@
+---
+desktop: minimal
+wm: leftwm
+gpu: nvidia
+bluetooth: yes
+touchpad: yes
+macchina_ascii: inf.ascii
+
+# software
+brave: yes
+dbeaver: yes
+docker: yes
+firefox: yes
+intellij: yes
+jdk: yes
+kvm: yes
+netextender: yes
+nodejs: yes
+obs: yes
+odbc: yes
+remmina: yes
+sbt: yes
+spotify: yes
+vscode: yes
+wompiler: yes
