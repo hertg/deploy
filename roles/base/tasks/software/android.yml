@@ -3,3 +3,5 @@
     name:
       - android-tools
       - android-file-transfer # mount android phones
+
+# paru: jadx (apk decompilation)

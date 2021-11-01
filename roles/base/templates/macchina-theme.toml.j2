@@ -1,0 +1,55 @@
+hide_ascii = false
+prefer_small_ascii = true
+spacing = 0
+padding = 0
+separator = "=>  "
+key_color = "Cyan"
+separator_color = "Blue"
+
+[bar]
+glyph = "o"
+symbol_open = "("
+symbol_close = ")"
+visible = false
+
+[box]
+title = ""
+visible = true
+
+[box.inner_margin]
+x = 1
+y = 0
+
+[custom_ascii]
+#color = "Yellow"
+# Uncomment to use your own ASCII art.
+# path = "/path/to/text/file"
+{% if macchina_ascii is defined %}
+path = "/home/{{ config_username }}/.config/macchina/{{ macchina_ascii }}"
+{% else %}
+path = "/home/{{ config_username }}/.config/macchina/arch.ascii"
+{% endif %}
+
+[randomize]
+key_color = false
+separator_color = false
+
+[keys]
+host = "Host"
+kernel = "Kernel"
+battery = "Battery"
+os = "OS"
+de = "DE"
+wm = "WM"
+distro = "Distro"
+terminal = "Terminal"
+shell = "Shell"
+packages = "Packages"
+uptime = "Uptime"
+memory = "Memory"
+machine = "Machine"
+local_ip = "IP"
+backlight = "Backlight"
+resolution = "Resolution"
+cpu_load = "CPU Load"
+cpu = "CPU"

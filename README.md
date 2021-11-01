@@ -165,8 +165,9 @@ swapoff -a
 reboot
 ```
 
-```
+```sh
 systemctl enable --now NetworkManager
 nmtui
+pacman -S inetutils # provides 'hostname' command
 ```
 </details>

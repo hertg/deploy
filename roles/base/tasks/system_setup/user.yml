@@ -77,10 +77,18 @@
     - { src: 'bottom', dest: '.config/'}
   register: userconfig_stat
 
-- name: system-setup | user | copy user configs from template
+- name: system-setup | user | make sure '/home/{{ config_username }}/.config/macchina/themes' dir exists
+  file: 
+    path: /home/{{ config_username }}/.config/macchina/themes 
+    mode: 0700
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    state: directory
+
+- name: system-setup | user | copy macchina theme to config directory
   template:
-    src: templates/macchina.toml.j2
-    dest: /home/{{ config_username }}/.config/macchina/macchina.toml
+    src: templates/macchina-theme.toml.j2
+    dest: /home/{{ config_username }}/.config/macchina/themes/Hertg.toml
     mode: 0700
     owner: "{{ config_username }}"
     group: "{{ config_username }}"
