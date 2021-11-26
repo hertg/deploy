@@ -2,4 +2,5 @@
   package:
     name:
       - npm
-      - nodejs
+      - nodejs-lts-gallium
+      #- nodejs
