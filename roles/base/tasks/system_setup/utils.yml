@@ -33,6 +33,7 @@
   vars:
     package:
       - macchina
+      - starship
 
 - name: system-setup | utils | check if plugin manager for neovim is already installed
   become: yes

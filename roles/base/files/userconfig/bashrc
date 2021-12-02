@@ -33,4 +33,6 @@ export PS1="\[\e[92m\]$(whoami | head -c 1)\[\e[m\]@\[\e[95m\]$(hostname | head 
 # PATH
 [[ -d $HOME/scripts ]] && export PATH="$HOME/scripts:$PATH"
 
+eval "$(starship init bash)"
+
 macchina
