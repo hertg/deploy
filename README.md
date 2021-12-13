@@ -2,11 +2,15 @@
 > Consider updating the system first before executing the playbook.
 
 ## Requirements
-- Ansible
-- Ansible general community packages
-  ```
-  ansible-galaxy collection install community.general
-  ```
+**Ansible**
+```shell
+sudo pacman -S ansible
+```
+
+**Ansible general community packages**
+```shell
+sudo ansible-galaxy collection install community.general
+```
 
 ## Usage
 
@@ -26,7 +30,20 @@ To run the ansible script from Github directly:
 make remote
 ```
 
-## Optional Software
+## Options
+The following options can be configured as host variables. They can also be omitted.
+
+```yaml
+desktop: minimal    # minimal, gnome, xfce
+
+# wm/dm only apply on 'minimal'
+wm: leftwm          # leftwm
+dm: lightdm         # lightdm, ly
+
+gpu: amd            # amd, nvidia, intel
+```
+
+## Software
 Optional software is not installed automatically, it has to be specified via host variables. 
 
 *Example*
