@@ -20,7 +20,7 @@
     backup: yes
 
 - name: software | steam | update package cache
-  pacman: update_cache=yes
+  community.general.pacman: update_cache=yes
   changed_when: False
 
 - name: software | steam | install OpenGL drivers (AMD)

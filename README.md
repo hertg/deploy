@@ -1,6 +1,13 @@
 # deploy
 > Consider updating the system first before executing the playbook.
 
+## Requirements
+- Ansible
+- Ansible general community packages
+  ```
+  ansible-galaxy collection install community.general
+  ```
+
 ## Usage
 
 To run the ansible script locally, after cloning the repository:
