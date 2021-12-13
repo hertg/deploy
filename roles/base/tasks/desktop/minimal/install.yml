@@ -26,6 +26,7 @@
       - picom-git
 
 - name: desktop | minimal | install display-manager (ly)
+  when: dm is defined and dm == 'ly'
   import_role:
     name: paru
   vars:
@@ -33,9 +34,25 @@
       - ly
 
 - name: desktop | minimal | enable display-manager (ly)
+  when: dm is defined and dm == 'ly'
   systemd:
     name: ly
     enabled: yes
+
+- name: desktop | minimal | install display-manager (lightdm)
+  when: dm is defined and dm == 'lightdm'
+  package:
+    name:
+      - lightdm
+      - lightdm-webkit2-greeter
+
+- name: desktop | minimal | enable display-manager (lightdm)
+  when: dm is defined and dm == 'lightdm'
+  systemd:
+    name: lightdm
+    enabled: yes
+
+# todo: install lightdm theme
 
 - name: desktop | minimal | check if leftwm is installed from source
   stat:

@@ -1,6 +1,7 @@
 ---
 desktop: minimal
 wm: leftwm
+dm: lightdm
 bluetooth: no
 macchina_ascii: inf.ascii
 

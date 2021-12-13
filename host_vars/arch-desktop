@@ -1,7 +1,7 @@
 ---
 desktop: minimal
 wm: leftwm
-display_manager: ly
+dm: lightdm
 gpu: amd
 bluetooth: yes
 

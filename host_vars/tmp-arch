@@ -1,6 +1,7 @@
 ---
 desktop: minimal
 wm: leftwm
+dm: lightdm
 gpu: intel
 bluetooth: yes
 touchpad: yes
