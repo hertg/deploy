@@ -53,6 +53,7 @@
     enabled: yes
 
 # todo: install lightdm theme
+# todo: configure lightdm to use correct greeter
 
 - name: desktop | minimal | check if leftwm is installed from source
   stat:

@@ -99,6 +99,8 @@ kvm: yes
 
 ## Todo
 - Teamviewer: install from AUR, enable teamviewerd
+- Thunderbolt 3
+- egpu-switcher
 
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
