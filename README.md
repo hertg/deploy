@@ -86,7 +86,6 @@ kvm: yes
 ```
 
 ## Todo
-- Teamviewer: install from AUR, enable teamviewerd
 - fwupd (incl. udisks2)
 
 <details>

@@ -1,15 +1,20 @@
 ---
+
+# desktop
 desktop: minimal
 wm: leftwm
 dm: lightdm
+
+# hardware
 gpu: nvidia
 bluetooth: yes
 thunderbolt: yes
 touchpad: yes
+
+# customize
 macchina_ascii: inf.ascii
 
 # software
-brave: yes
 dbeaver: yes
 docker: yes
 firefox: yes
@@ -25,4 +30,5 @@ sbt: yes
 spotify: yes
 vscode: yes
 egpu_switcher: yes
+teamviewer: yes
 wompiler: yes

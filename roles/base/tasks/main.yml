@@ -109,6 +109,9 @@
   
   - import_tasks: software/egpu_switcher.yml
     when: egpu_switcher is defined and egpu_switcher == true
+  
+  - import_tasks: software/teamviewer.yml
+    when: teamviewer is defined and teamviewer == true
 
   - import_tasks: software/steam.yml
     when: steam is defined and steam == true

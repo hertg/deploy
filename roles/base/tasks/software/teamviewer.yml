@@ -1,0 +1,20 @@
+- name: software | teamviewer | install teamviewer
+  import_role:
+    name: paru
+  vars:
+    package:
+      - teamviewer
+
+- name: software | teamviewer | enable and start the Teamviewer Daemon
+  systemd:
+    name: teamviewerd
+    enabled: yes
+    state: started
+
+- name: software | teamviewer | install teamviewer
+  when: remmina is defined and remmina == true
+  import_role:
+    name: paru
+  vars:
+    package:
+      - remmina-plugin-teamviewer
