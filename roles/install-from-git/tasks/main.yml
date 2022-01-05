@@ -1,23 +1,33 @@
-- name: install from git | checkout
-  ansible.builtin.git:
-    repo: '{{ git_url }}'
-    dest: /tmp/{{ dir_name }}
+- name: install from git | check if already installed
+  when: binary_check is defined
+  shell: which {{ binary_check }}
+  register: _check_result
+  changed_when: false
+  failed_when: false
 
-- name: system-setup | aur | change ownership of paru repository
-  file:
-    path: /tmp/{{ dir_name }}
-    state: directory
-    owner: aur_builder
-    recurse: yes
+- when: binary_check is not defined or _check_result.rc != 0
+  block:
 
-- name: system-setup | aur | install paru (AUR helper)
-  become: yes
-  become_user: aur_builder
-  command: makepkg --syncdeps --install --noconfirm
-  args:
-    chdir: /tmp/{{ dir_name }}
+  - name: install from git | checkout '{{ git_url }}' to temporary directory
+    ansible.builtin.git:
+      repo: '{{ git_url }}'
+      dest: /tmp/{{ dir_name }}
 
-- name: system-setup | aur | change ownership of paru repository
-  file:
-    path: /tmp/{{ dir_name }}
-    state: absent
+  - name: install from git | change ownership of temporary directory
+    file:
+      path: /tmp/{{ dir_name }}
+      state: directory
+      owner: aur_builder
+      recurse: yes
+
+  - name: install from git | install via makepkg
+    become: yes
+    become_user: aur_builder
+    command: makepkg --syncdeps --rmdeps --install --noconfirm --noprogressbar
+    args:
+      chdir: /tmp/{{ dir_name }}
+
+  - name: install from git | remove temporary directory '{{ git_url }}'
+    file:
+      path: /tmp/{{ dir_name }}
+      state: absent

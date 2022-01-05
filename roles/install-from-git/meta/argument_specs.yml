@@ -11,3 +11,8 @@ argument_specs:
         type: "str"
         required: true
         description: "url to the repository to checkout (eg. 'https://aur.archlinux.org/paru.git')"
+      
+      binary_check:
+        type: "str"
+        required: false
+        description: "by default, the installation will only start if this binary can't be found on the $PATH"
