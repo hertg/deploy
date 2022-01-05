@@ -9,6 +9,3 @@
     name: 
       - rsync
     state: latest
-
-#- name: ansible setup | install galaxy requirements
-#  command: ansible-galaxy collection install -r requirements.yml

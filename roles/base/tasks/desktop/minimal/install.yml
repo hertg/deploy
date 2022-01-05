@@ -11,7 +11,7 @@
       - xterm
       - xsettingsd
 
-- name: desktop | minimal | install compositor, background, and more
+- name: desktop | minimal | install desktop tools
   package:
     name:
       - feh # background
@@ -61,7 +61,7 @@
   register: leftwm_stat
 
 - name: desktop | minimal | install window-manager (leftwm)
-  when: not leftwm_stat.stat.exists
+  when: not leftwm_stat.stat.exists # only if it hasn't been installed from source
   import_role:
     name: paru
   vars:
