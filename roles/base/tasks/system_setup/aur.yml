@@ -20,6 +20,7 @@
       user:
         name: aur_builder
         create_home: yes
+        system: yes
 
     - name: system-setup | aur | allow aur_builder to run pacman
       lineinfile:
@@ -27,6 +28,11 @@
         line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
         create: yes
         validate: 'visudo -cf %s'
+
+    #- name: system-setup | aur | configure rustup for aur_builder
+    #  command: rustup default stable
+    #  become_user: aur_builder
+    # -> this may only be necessary if rustup was installed beforehand..?
 
     - name: system-setup | aur | install paru
       import_role:
