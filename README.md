@@ -1,5 +1,4 @@
 # deploy
-> Consider updating the system first before executing the playbook.
 
 ## Requirements
 **Ansible**
@@ -7,26 +6,15 @@
 sudo pacman -S ansible
 ```
 
-**Ansible general community packages**
-```shell
-sudo ansible-galaxy collection install community.general
-```
-
 ## Usage
 
 To run the ansible script locally, after cloning the repository:
-```sh
-# this is just a shorthand for 'make local' which is:
-# sudo ansible-playbook -c local -i $(HOSTNAME), local.yml
-
-make
+```shell
+make local
 ```
 
 To run the ansible script from Github directly:
-```sh
-# this is just a shorthand for:
-# sudo ansible-pull -U https://github.com/hertg/deploy
-
+```shell
 make remote
 ```
 
@@ -99,8 +87,7 @@ kvm: yes
 
 ## Todo
 - Teamviewer: install from AUR, enable teamviewerd
-- Thunderbolt 3
-- egpu-switcher
+- fwupd (incl. udisks2)
 
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>

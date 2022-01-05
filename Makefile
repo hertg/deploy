@@ -1,10 +1,16 @@
 HOSTNAME := $(shell hostname)
-LOGFILE := ansible_$(shell date +%s).log
+#LOGFILE := ansible_$(shell date +%s).log
 
 all: local
 
-local:
-	sudo ansible-playbook -c local -i $(HOSTNAME), local.yml 2>&1 | tee $(LOGFILE)
+galaxy:
+	sudo ansible-galaxy collection install -r requirements.yml
 
-remote:
-	sudo ansible-pull -U https://github.com/hertg/deploy 2>&1 | tee $(LOGFILE)
+check:
+	sudo ansible-playbook --check -c local -i $(HOSTNAME), local.yml
+
+local: galaxy
+	sudo ansible-playbook -c local -i $(HOSTNAME), local.yml
+
+remote: galaxy
+	sudo ansible-pull -U https://github.com/hertg/deploy
