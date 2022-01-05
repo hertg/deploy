@@ -1,0 +1,5 @@
+- name: system-setup | firmware | install fwupd
+  package:
+    name:
+      - fwupd
+      - udisks2 # requirement for UEFI updates

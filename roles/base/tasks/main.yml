@@ -20,6 +20,7 @@
   - import_tasks: system_setup/power.yml
   - import_tasks: system_setup/utils.yml
   - import_tasks: system_setup/thunderbolt.yml
+  - import_tasks: system_setup/firmware.yml
   - import_tasks: system_setup/multimedia.yml
 
   - import_tasks: system_setup/bluetooth.yml

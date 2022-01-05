@@ -29,6 +29,10 @@ wm: leftwm          # leftwm
 dm: lightdm         # lightdm, ly
 
 gpu: amd            # amd, nvidia, intel
+
+bluetooth: yes
+thunderbolt: yes
+touchpad: yes
 ```
 
 ## Software
@@ -85,9 +89,7 @@ kvm: yes
     git_url: https://github.com/hertg/steelseries-arctis-pro-wireless
 ```
 
-## Todo
-- fwupd (incl. udisks2)
-
+### Base Installation
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
  
