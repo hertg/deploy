@@ -1,0 +1,6 @@
+- name: software | egpu-switcher | install egpu-switcher
+  import_role:
+    name: paru
+  vars:
+    package:
+      - egpu-switcher-git

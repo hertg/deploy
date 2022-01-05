@@ -19,6 +19,7 @@
   - import_tasks: system_setup/audio.yml
   - import_tasks: system_setup/power.yml
   - import_tasks: system_setup/utils.yml
+  - import_tasks: system_setup/thunderbolt.yml
   - import_tasks: system_setup/multimedia.yml
 
   - import_tasks: system_setup/bluetooth.yml
@@ -105,6 +106,9 @@
   
   - import_tasks: software/spotify.yml
     when: spotify is defined and spotify == true
+  
+  - import_tasks: software/egpu_switcher.yml
+    when: egpu_switcher is defined and egpu_switcher == true
 
   - import_tasks: software/steam.yml
     when: steam is defined and steam == true

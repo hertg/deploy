@@ -1,0 +1,5 @@
+- name: system-setup | touchpad | install packages
+  when: thunderbolt is defined and thunderbolt == true
+  package:
+    name: bolt
+  

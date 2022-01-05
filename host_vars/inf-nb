@@ -4,6 +4,7 @@ wm: leftwm
 dm: lightdm
 gpu: nvidia
 bluetooth: yes
+thunderbolt: yes
 touchpad: yes
 macchina_ascii: inf.ascii
 
@@ -23,4 +24,5 @@ remmina: yes
 sbt: yes
 spotify: yes
 vscode: yes
+egpu_switcher: yes
 wompiler: yes
