@@ -16,7 +16,7 @@ Plug 'rust-lang/rust.vim'                   " Rust highlighting, formatting
 Plug 'tpope/vim-surround'					" Surroundings (parantheses, brackets, quotes, tags)
 Plug 'tpope/vim-repeat'						" Repeat non-native commands with '.'
 
-Plug 'wakatime/vim-wakatime'                " Wakatime plugin
+"Plug 'wakatime/vim-wakatime'                " Wakatime plugin
 
 call plug#end()
 

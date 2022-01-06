@@ -66,6 +66,14 @@ kvm: yes
 - [ ] vscode
 - [ ] wompiler
 
+## Todo
+- 1Password
+- Firefox Configuration + Extensions
+- X.org config for monitor
+- Arandr / Autorandr
+- Set user password (always manually)
+- Set up SSH key (always manually)
+
 ## Custom Roles
 ### Install with paru (AUR)
 ```yml
