@@ -67,16 +67,34 @@ kvm: yes
 - [ ] wompiler
 
 ## Todo
-- 1Password
-- Firefox Configuration + Extensions
+- 1Password / Bitwarden
+- Firefox Configuration + Extensions / Librewolf
 - X.org config for monitor
 - Arandr / Autorandr
 - Thunar (File Manager)
 - `ntfs-3g` to mount Windows NTFS drives
-- Udiskie (Mount storage devices)
+- Udiskie (Automount storage devices)
 - Configure KVM/QEMU (image locations, access rights, ...)
 - Set user password (always manually)
 - Set up SSH key (always manually)
+- CUPS / Printing + Permissions (https://unix.stackexchange.com/a/392629/351554) + `system-config-printer`?
+  ```
+  hp-setup -i <printer-ip>
+  sudo chown root:root /usr/lib/cups/backend/
+  ```
+- boltctl + manual device authorization
+- st
+- polybar for multi-monitor
+- enable + start `docker.service`
+- dbeaver configuration: AllowPublicKeyRetrieval = true
+- create sbt/gradle credential files (alwlays manually)
+- docker-compose
+- golang
+- postman
+- adobe-base-14-fonts
+- Yubikey Authenticator 
+  `systemctl enable --now pcscd`
+
 
 ## Custom Roles
 ### Install with paru (AUR)
