@@ -89,6 +89,20 @@ kvm: yes
     git_url: https://github.com/hertg/steelseries-arctis-pro-wireless
 ```
 
+## Troubleshoot
+
+### Invalid or corrupted package
+
+**Symptom**\
+invalid or corrupted package (PGP signature)
+
+**Solution**
+```shell
+pacman-key --init
+pacman-key --populate
+```
+
+
 ### Base Installation
 <details>
 <summary>Installation based on <a href="https://wiki.archlinux.org/title/installation_guide#Installation">Arch Installation Guide</a></summary>
