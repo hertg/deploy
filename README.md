@@ -89,6 +89,7 @@ kvm: yes
 - dbeaver configuration: AllowPublicKeyRetrieval = true
 - create sbt/gradle credential files (alwlays manually)
 - docker-compose
+- `gvfs-smb` (mount cifs share)
 - golang
 - postman
 - adobe-base-14-fonts
