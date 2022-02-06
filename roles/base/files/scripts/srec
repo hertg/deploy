@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir -p ~/Videos/screencasts
+capture=$(slop -f '-video_size %wx%h -i :0.0+%x,%y')
+ffmpeg -f x11grab $capture -framerate 25 -c:v libx264 -preset ultrafast ~/Videos/screencasts/$(date +%F_%H-%M-%S).mp4
+

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+declare red='\033[1;31m'
+declare yellow='\033[1;33m'
+declare green='\033[1;32m'
+declare blue='\033[1;34m'
+declare blank='\033[0m'
+
+DIR_NAME=$(basename "$PWD")
+
+printf "clean up $green$DIR_NAME$blank? [y/N]: "
+read answer
+
+if [ $answer == 'y' ]; then
+  echo
+
+	git clean -xdf
+
+	wompiler update
+
+	ln -sf ~/Workspace/env/$DIR_NAME.env .env
+fi
+
+echo
+echo -e "$green[finished]$blank"

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+declare red='\033[1;31m'
+declare yellow='\033[1;33m'
+declare green='\033[1;32m'
+declare blue='\033[1;34m'
+declare blank='\033[0m'
+
+DIR_NAME=$(basename "$PWD")
+
+SYSTEM=$(cut -d'.' -f1 <<< $DIR_NAME)
+SCOPE=$(cut -d'.' -f2 <<< $DIR_NAME)
+LAYER=$(cut -d'.' -f3 <<< $DIR_NAME)
+COMPONENT=$(cut -d'.' -f4 <<< $DIR_NAME)
+
+BASE_LAYER_DIR=$SYSTEM.$SCOPE.base.$COMPONENT
+
+printf "copy L1 from $green$DIR_NAME$blank → $green$BASE_LAYER_DIR$blank? [y/N]: "
+read answer
+
+if [ $answer == 'y' ]; then
+  #find . -type f \( -name "*L1.java" -o -name "*l1.*" \) -exec cp --parents '{}' ../$BASE_LAYER_DIR/ \;
+
+  echo
+  echo -e "$green[update]$blank"
+  rsync -zrmc --info=name --exclude="/target" --exclude="/node_modules" --include="*/" --include="*L1.*" --include="*l1.*" --exclude="*" . "../$BASE_LAYER_DIR"
+
+  cd ../$BASE_LAYER_DIR
+  echo
+  echo -e "$red[remove]$blank"
+  find . -type f \( -name "*L1.*" -o -name "*l1.*" \) -exec sh -c "if [ ! -f ../$DIR_NAME/{} ]; then rm {} && echo {};fi" \;
+  cd ../$DIR_NAME
+  #rsync --recursive --verbose --prune-empty-dirs --checksum --update --times --delete --progress --dry-run "." "../$BASE_LAYER_DIR"
+  #rsync -v -i -d --include="*/" --include="*L1.java" --include="*l1.*" --exclude="*" --checksum --delete --progress --dry-run "./" "../$BASE_LAYER_DIR/"
+  #find . -type f \( -name "*L1.java" -o -name "*l1.*" \) -exec rsync --checksum --update --times --recursive --delete --info=del,name --dry-run '{}' ../$BASE_LAYER_DIR/ \;
+fi
+
+echo
+echo -e "$green[finished]$blank"

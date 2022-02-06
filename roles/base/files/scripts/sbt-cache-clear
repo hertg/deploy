@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -rf ~/.cache/coursier/v1/
+rm -rf ~/.m2/repository/
+rm -rf ~/.ivy2/cache/
+rm -rf ~/.ivy2/local/
+rm -rf ~/.gradle/caches/

@@ -101,3 +101,12 @@
     owner: "{{ config_username }}"
     group: "{{ config_username }}"
     state: link
+
+- name: system-setup | user | create 'scripts' directory
+  copy:
+    src: scripts/
+    dest: /home/{{ config_username }}/scripts
+    owner: "{{ config_username }}"
+    group: "{{ config_username }}"
+    mode: preserve
+

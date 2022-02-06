@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# fixes blank intellij issue for dwm
+export _JAVA_AWT_WM_NONREPARENTING=1 # this doesn't seem to do anything
+export AWT_TOOLKIT=MToolkit # this doesn't seem to do anything
+wmname LG3D
+
+dwmblocks &
+
+while true; do
+    dwm &>> ~/.dwm.log
+done
