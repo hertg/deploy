@@ -93,7 +93,7 @@ kvm: yes
 - golang
 - postman
 - adobe-base-14-fonts
-- Yubikey Authenticator 
+- Yubikey Authenticator: `yubioath-desktop`
   `systemctl enable --now pcscd`
 
 
