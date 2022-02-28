@@ -11,13 +11,13 @@ layouts = [
     "CenterMainBalanced",
     "MainAndVertStack",
     "Fibonacci",
-    #"MainAndDeck",
+    "MainAndDeck",
     #"MainAndVertStack",
     #"MainAndHorizontalStack",
     #"GridHorizontal",
     #"EvenHorizontal",
     #"EvenVertical",
-    #"Fibonacci",
+    "Fibonacci",
     #"CenterMain",
     #"Monocle",
     #"RightWiderLeftStack",
@@ -41,6 +41,19 @@ value = "alacritty" # The command to load the application if it isn't started
 #x = 2560
 #height = 1440
 #width = 2560
+
+window_rules = [
+  {window_class = "com-sonicwall-NetExtender", spawn_on_tag = 1},
+  {window_class = "threema-web", spawn_on_tag = 2}, 
+  {window_class = "Navigator", spawn_on_tag = 3},
+  {window_class = "spotify", spawn_on_tag = 4},
+  {window_class = "org.remmina.Remmina", spawn_on_tag = 6},
+  {window_class = "TeamViewer", spawn_on_tag = 6},
+  {window_class = "code-oss", spawn_on_tag = 7},
+  {window_class = "jetbrains-idea", spawn_on_tag = 7},
+  {window_class = "postman", spawn_on_tag = 7},
+  {window_class = "DBeaver", spawn_on_tag = 8},
+]
 
 [[keybind]]
 command = "Execute"
@@ -135,6 +148,16 @@ key = "period"
 [[keybind]]
 command = "FocusWorkspacePrevious"
 modifier = ["modkey"]
+key = "comma"
+
+[[keybind]]
+command = "MoveWindowToNextWorkspace"
+modifier = ["modkey", "Shift"]
+key = "period"
+
+[[keybind]]
+command = "MoveWindowToPreviousWorkspace"
+modifier = ["modkey", "Shift"]
 key = "comma"
 
 [[keybind]]

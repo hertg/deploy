@@ -95,6 +95,7 @@ kvm: yes
 - adobe-base-14-fonts
 - Yubikey Authenticator: `yubioath-desktop`
   `systemctl enable --now pcscd`
+- SVN (RabbitVCS): `rabbitvcs rabbitvcs-thunar-git` (AUR)
 
 
 ## Custom Roles
