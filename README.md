@@ -96,6 +96,7 @@ kvm: yes
 - Yubikey Authenticator: `yubioath-desktop`
   `systemctl enable --now pcscd`
 - SVN (RabbitVCS): `rabbitvcs rabbitvcs-thunar-git` (AUR)
+- QR code reader: `zbar`
 
 
 ## Custom Roles
