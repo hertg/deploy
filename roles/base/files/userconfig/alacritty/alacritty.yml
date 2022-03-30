@@ -239,7 +239,7 @@ schemes:
       cyan: '#95E6CB'
       white: '#FFFFFF'
 
-colors: *gruvbox
+colors: *ayu
 
 #selection:
   # This string contains all characters that are used as separators for
