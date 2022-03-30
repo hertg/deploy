@@ -15,6 +15,7 @@ alias ga='git add .'
 alias gs='git status'
 alias gm='git commit -m'
 alias gam="git add . && git commit -m"
+alias gp="git push origin $(git branch --show-current)"
 
 alias grep='grep --color'
 alias vim='nvim'
