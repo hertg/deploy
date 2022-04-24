@@ -1,4 +1,0 @@
-- name: system-setup | icons | install icons
-  package:
-    name: 
-      - papirus-icon-theme

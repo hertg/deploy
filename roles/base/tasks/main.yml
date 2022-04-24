@@ -15,7 +15,7 @@
   - import_tasks: system_setup/touchpad.yml
   - import_tasks: system_setup/graphics.yml
   - import_tasks: system_setup/fonts.yml
-  - import_tasks: system_setup/icons.yml
+  - import_tasks: system_setup/themes.yml
   - import_tasks: system_setup/audio.yml
   - import_tasks: system_setup/power.yml
   - import_tasks: system_setup/utils.yml
