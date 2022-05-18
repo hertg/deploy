@@ -21,6 +21,9 @@ alias grep='grep --color'
 alias vim='nvim'
 alias vi='nvim'
 
+alias please='sudo'
+alias pls='sudo'
+
 alias apull='ansible-pull -U https://github.com/hertg/deploy'
 
 # exports
