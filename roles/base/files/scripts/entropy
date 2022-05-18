@@ -10,7 +10,7 @@ base=int(sys.argv[2])
 combinations=pow(base, length)
 entropy=round(math.log2(combinations), 2)
 
-print("entropy of", entropy, "bits")
+print(entropy, "bits /", int(entropy / 8), "bytes")
 
 if(entropy > 256):
     print("incredibly strong (overkill)")
