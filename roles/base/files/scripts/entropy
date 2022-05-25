@@ -7,10 +7,16 @@ import math
 
 length=int(sys.argv[1])
 base=int(sys.argv[2])
-combinations=pow(base, length)
-entropy=round(math.log2(combinations), 2)
 
-print(entropy, "bits /", int(entropy / 8), "bytes")
+# entropy in bits
+entropy=math.log2(pow(base, length))
+entropy_bytes=int(entropy / 8)
+
+# amount of attemptps statistically required to bruteforce
+bruteforce=round(pow(2,entropy-1))
+
+print(round(entropy, 2), "bits /", entropy_bytes, "bytes")
+#print(f"{bruteforce:,}", "bruteforce")
 
 if(entropy > 256):
     print("incredibly strong (overkill)")

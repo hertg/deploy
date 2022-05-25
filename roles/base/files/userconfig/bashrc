@@ -24,7 +24,8 @@ alias vi='nvim'
 alias please='sudo'
 alias pls='sudo'
 
-alias apull='ansible-pull -U https://github.com/hertg/deploy'
+# usage: 'mailenc <recipient-pubkey-file> <message-file>'
+alias mailenc='gpg --encrypt --sign --armor --recipient-file'
 
 # exports
 export EDITOR=vim

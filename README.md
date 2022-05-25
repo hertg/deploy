@@ -95,6 +95,8 @@ kvm: yes
 - adobe-base-14-fonts
 - Yubikey Authenticator: `yubioath-desktop`
   `systemctl enable --now pcscd`
+- Yubikey Personalization Tool `yubikey-personalization-gui`
+- Yubikey Manager GUI `yubikey-manager-qt`
 - SVN (RabbitVCS): `rabbitvcs rabbitvcs-thunar-git` (AUR)
 - QR code reader: `zbar`
 
