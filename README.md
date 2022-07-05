@@ -99,6 +99,7 @@ kvm: yes
 - Yubikey Manager GUI `yubikey-manager-qt`
 - SVN (RabbitVCS): `rabbitvcs rabbitvcs-thunar-git` (AUR)
 - QR code reader: `zbar`
+- zoiper
 
 
 ## Custom Roles
