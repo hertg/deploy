@@ -1,0 +1,8 @@
+#!/bin/sh
+
+file="$1"
+if [ -z "$1" ]; then
+	echo "please provide a filepath"
+	exit 1
+fi
+grep -v -E \- $file | tr -d '\n' | base64 -d | openssl asn1parse -inform DER
