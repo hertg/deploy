@@ -100,7 +100,7 @@ kvm: yes
 - SVN (RabbitVCS): `rabbitvcs rabbitvcs-thunar-git` (AUR)
 - QR code reader: `zbar`
 - zoiper
-
+- `light-locker` (`light-locker-command -l`)
 
 ## Custom Roles
 ### Install with paru (AUR)
