@@ -42,3 +42,6 @@
 
 "light -U 10"
    XF86MonBrightnessDown
+
+"light-locker-command -l"
+	 Shift + Mod2 + Mod4 + l
