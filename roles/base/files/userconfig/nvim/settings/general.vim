@@ -2,7 +2,7 @@ set nocompatible        "
 
 syntax enable           " Enable syntax highlighting
 
-		
+
 "" Cursor
 set ruler               " Show cursor position at all times
 set relativenumber      " Relative line numbers

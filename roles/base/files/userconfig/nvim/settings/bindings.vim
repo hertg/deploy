@@ -1,7 +1,3 @@
-" leaders
-let mapleader = ","
-let maplocalleader = ","
-
 " split navigation
 nnoremap <leader>wh <C-w>h
 nnoremap <leader>wj <C-w>j
@@ -12,7 +8,7 @@ nnoremap <leader>wv <C-w>v
 nnoremap <leader>wq <C-w>q
 
 " ranger
-nnoremap <leader>f :Ranger<CR>
+nnoremap <leader>f :NvimTreeFocus<CR>
 
 " search
 nnoremap <leader>s /
