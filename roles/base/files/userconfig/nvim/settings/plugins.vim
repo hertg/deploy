@@ -10,13 +10,15 @@ Plug 'airblade/vim-gitgutter'               " show added/changed lines in git re
 Plug 'ryanoasis/vim-devicons'               " show icons in nerdtree
 Plug 'ntpeters/vim-better-whitespace'       " highlight unnecessary whitespace
 Plug 'dense-analysis/ale'                   " linting
+Plug 'valloric/youcompleteme'								" autocomplete
 
 Plug 'rust-lang/rust.vim'                   " Rust highlighting, formatting
 
-Plug 'tpope/vim-surround'					" Surroundings (parantheses, brackets, quotes, tags)
-Plug 'tpope/vim-repeat'						" Repeat non-native commands with '.'
+Plug 'tpope/vim-surround'										" Surroundings (parantheses, brackets, quotes, tags)
+Plug 'tpope/vim-repeat'											" Repeat non-native commands with '.'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }	" Golang
 
-"Plug 'wakatime/vim-wakatime'                " Wakatime plugin
+"Plug 'wakatime/vim-wakatime'               " Wakatime plugin
 
 call plug#end()
 
