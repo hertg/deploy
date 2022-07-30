@@ -23,3 +23,4 @@ call plug#end()
 source $HOME/.config/nvim/plug-settings/lightline.vim
 source $HOME/.config/nvim/plug-settings/ranger.vim
 source $HOME/.config/nvim/plug-settings/rust.vim
+source $HOME/.config/nvim/plug-settings/coc.vim
