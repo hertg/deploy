@@ -32,3 +32,4 @@ source $HOME/.config/nvim/plug-settings/rust.vim
 source $HOME/.config/nvim/plug-settings/coc.vim
 source $HOME/.config/nvim/plug-settings/gruvbox.vim
 source $HOME/.config/nvim/plug-settings/nvimtree.vim
+source $HOME/.config/nvim/plug-settings/golang.vim

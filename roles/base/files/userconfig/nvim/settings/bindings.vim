@@ -16,3 +16,6 @@ nnoremap <leader>s /
 " shortcuts
 nnoremap <leader>qq :q<CR>
 nnoremap <leader>qw :wq<CR>
+
+" terminal
+tnoremap <Esc> <C-\><C-n> " close terminal with Esc
