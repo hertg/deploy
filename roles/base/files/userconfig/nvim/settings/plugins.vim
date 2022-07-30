@@ -7,17 +7,17 @@ Plug 'francoiscabrol/ranger.vim'            			" ranger file manager
 Plug 'rbgrouleff/bclose.vim'                			" necessary plugin for ranger
 
 Plug 'airblade/vim-gitgutter'               			" show added/changed lines in git repos
-Plug 'ryanoasis/vim-devicons'               			" show icons in nerdtree
+"Plug 'ryanoasis/vim-devicons'               			" show icons in nerdtree
 Plug 'ntpeters/vim-better-whitespace'       			" highlight unnecessary whitespace
-Plug 'dense-analysis/ale'                   			" linting
+"Plug 'dense-analysis/ale'                   			" linting
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 	" autocomplete
-
-Plug 'rust-lang/rust.vim'                   			" Rust highlighting, formatting
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'rust-lang/rust.vim'                   			" Rust highlighting, formatting
 
 Plug 'tpope/vim-surround'													" Surroundings (parantheses, brackets, quotes, tags)
 Plug 'tpope/vim-repeat'														" Repeat non-native commands with '.'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }	" Golang
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }	" Golang
 
 call plug#end()
 
