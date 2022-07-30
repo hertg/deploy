@@ -3,4 +3,5 @@
     name:
       - npm
       - nodejs-lts-gallium
+      - yarn
       #- nodejs

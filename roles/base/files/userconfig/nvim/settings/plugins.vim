@@ -10,7 +10,25 @@ Plug 'airblade/vim-gitgutter'               			" show added/changed lines in git
 Plug 'ryanoasis/vim-devicons'               			" show icons in nerdtree
 Plug 'ntpeters/vim-better-whitespace'       			" highlight unnecessary whitespace
 Plug 'dense-analysis/ale'                   			" linting
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 	" autocomplete
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-docker', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-go', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-nginx', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-sh', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-sql', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-svelte', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-swagger', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-toml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'rust-lang/rust.vim'                   			" Rust highlighting, formatting
 
