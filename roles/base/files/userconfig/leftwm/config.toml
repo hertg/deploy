@@ -12,16 +12,6 @@ layouts = [
     "MainAndVertStack",
     "Fibonacci",
     "MainAndDeck",
-    #"MainAndVertStack",
-    #"MainAndHorizontalStack",
-    #"GridHorizontal",
-    #"EvenHorizontal",
-    #"EvenVertical",
-    "Fibonacci",
-    #"CenterMain",
-    #"Monocle",
-    #"RightWiderLeftStack",
-    #"LeftWiderRightStack",
 ]
 
 # Create a scratchpad for alacritty
