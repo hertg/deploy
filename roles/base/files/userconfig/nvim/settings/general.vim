@@ -8,7 +8,6 @@ set ruler               " Show cursor position at all times
 set relativenumber      " Relative line numbers
 set number              " Show actual line number on current line
 
-
 "" Formatting / Visuals
 set t_Co=256            " Support 256 colors
 set tabstop=2           " Insert 2 spaces for tabs
@@ -16,6 +15,7 @@ set shiftwidth=2        " Number of spaces to use for each indent
 set noshowmode          " Don't display mode (It's already displayed in lightline)
 set breakindent         " Stay indented after linebreaks
 set nowrap              " Don't wrap long lines
+set noequalalways 			" Don't automatically resize windows to equal widths
 
 "" Search
 set ignorecase          " ignore case when searching
