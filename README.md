@@ -101,7 +101,8 @@ kvm: yes
 - QR code reader: `zbar`
 - zoiper
 - `light-locker` (`light-locker-command -l`)
-- `timewarrior`
+- timewarrior: `timew`
+- taskwarrior: `task`
 
 ## Custom Roles
 ### Install with paru (AUR)
