@@ -103,6 +103,8 @@ kvm: yes
 - `light-locker` (`light-locker-command -l`)
 - timewarrior: `timew`
 - taskwarrior: `task`
+- ClamAV: `clamav`
+- Lynis: `lynis`
 
 ## Custom Roles
 ### Install with paru (AUR)
