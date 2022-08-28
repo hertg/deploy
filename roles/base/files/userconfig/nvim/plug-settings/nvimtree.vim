@@ -8,7 +8,7 @@ require("nvim-tree").setup({
 	sync_root_with_cwd = true,
 	update_focused_file = {
 		enable = true,
-		update_root = true,
+		update_root = false,
 	},
   view = {
     adaptive_size = true,
@@ -24,6 +24,9 @@ require("nvim-tree").setup({
 		open_file = {
 			quit_on_open = false,
 		},
+	},
+	git = {
+		ignore = false,
 	},
 })
 EOF
