@@ -1,7 +1,9 @@
 #![enable(implicit_some)]
-border_width: 1
-margin: 20
-#workspace_margin = 10
-default_border_color: "#222222"
-floating_border_color: "#22ee22"
-focused_border_color: "#ee2222"
+ThemeSetting(
+    border_width: 1,
+    margin: 20,
+    // workspace_margin = 10,
+    default_border_color: "#222222",
+    floating_border_color: "#22ee22",
+    focused_border_color: "#ee2222",
+)
