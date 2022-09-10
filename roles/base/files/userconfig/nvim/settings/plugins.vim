@@ -9,6 +9,7 @@ Plug 'kyazdani42/nvim-web-devicons' 							" optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua' 									" file explorer
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Golang
+Plug 'ron-rs/ron.vim' 														" ron syntax
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 	" autocomplete
 
