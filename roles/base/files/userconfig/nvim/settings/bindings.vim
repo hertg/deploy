@@ -18,6 +18,12 @@ nnoremap <leader>wJ <C-w>J
 nnoremap <leader>wK <C-w>K
 nnoremap <leader>wL <C-w>L
 
+" split resize
+nnoremap <leader>Wh <C-w>5<
+nnoremap <leader>Wj <C-w>5-
+nnoremap <leader>Wk <C-w>5+
+nnoremap <leader>Wl <C-w>5>
+
 " split terminal
 nnoremap <leader>wt :terminal<CR>:resize 12<CR>:set winfixheight<CR>
 
@@ -29,6 +35,8 @@ nnoremap <leader>s /
 
 " shortcuts
 nnoremap <leader>qq :q<CR>
+nnoremap <leader>qa :qa<CR>
+nnoremap <leader>qwa :qwa<CR>
 nnoremap <leader>qw :wq<CR>
 nnoremap <leader>ww :w<CR>
 nnoremap <leader>wa :wa<CR>
