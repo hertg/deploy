@@ -105,6 +105,7 @@ kvm: yes
 - taskwarrior: `task`
 - ClamAV: `clamav`
 - Lynis: `lynis`
+- [Disable beep](https://bbs.archlinux.org/viewtopic.php?id=276754)
 
 ## Custom Roles
 ### Install with paru (AUR)
