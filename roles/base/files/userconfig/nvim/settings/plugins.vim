@@ -18,7 +18,7 @@ Plug 'tpope/vim-fugitive'                   			" Git integration
 Plug 'tpope/vim-surround'													" Surroundings (parantheses, brackets, quotes, tags)
 Plug 'tpope/vim-repeat'														" Repeat non-native commands with '.'
 Plug 'tpope/vim-commentary' 											" Toggle comments with gcc
-
+Plug 'wellle/context.vim' 												" Show (function) context in source code
 
 Plug 'junegunn/goyo.vim' 													" Distraction-free viewing
 Plug 'junegunn/limelight.vim' 										" Hyperfocus on a range
