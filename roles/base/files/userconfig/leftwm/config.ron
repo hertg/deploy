@@ -23,7 +23,7 @@
         "database",
         "graphics",
     ],
-    max_window_width: 2200,
+    max_window_width: 2560,
     layouts: [
         CenterMainBalanced,
         MainAndVertStack,
@@ -35,7 +35,18 @@
     scratchpad: [
         (name: "Alacritty", value: "alacritty", x: None, y: None, height: None, width: None),
     ],
-    window_rules: [],
+    window_rules: [
+        ( window_title: "Picture-in-Picture", spawn_as_type: Normal ),
+        ( window_class: "discord", spawn_on_tag: 2 ),
+        ( window_class: "Steam", spawn_on_tag: 5 ),
+        ( window_class: "code-oss", spawn_on_tag: 7 ),
+        ( window_class: "jetbrains-idea", window_title: "splash", spawn_floating: true, spawn_on_tag: 7 ),
+        ( window_class: "jetbrains-idea", spawn_on_tag: 7 ),
+        ( window_class: "Navigator", spawn_on_tag: 3 ),
+        ( window_class: "threema-web", spawn_on_tag: 2 ),
+        ( window_class: "signal", spawn_on_tag: 2 ),
+        ( window_class: "soundux", spawn_on_tag: 2 ),
+    ],
     disable_current_tag_swap: true,
     disable_tile_drag: false,
     disable_window_snap: true,
