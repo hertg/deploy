@@ -1,5 +1,4 @@
 $accent_color: #D35D6E;
-// $accent_color: yellow;
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -10,7 +9,6 @@ $accent_color: #D35D6E;
   background-color: #000000;
 	background-color: rgba(0,0,0,0.3);
   color: #eeeeee;
-  // padding: 20px;
 	font-family: 'monospace', 'sans-serif';
 	font-size: 18px;
 }
@@ -19,22 +17,14 @@ $accent_color: #D35D6E;
 .left {
 	padding-left: 12px;
 }
-
-// .left slider {
-//   all: unset;
-//   color: #ffd5cd;
-// }
-
 .right {
 	padding-right: 12px;
 }
-
 .icontext {
 	margin-left: 12px;
 	padding: 4px 8px;
 	border-top: 2px solid $accent_color;
 }
-
 .metric scale trough highlight {
   all: unset;
   background-color: $accent_color;
@@ -68,31 +58,20 @@ $accent_color: #D35D6E;
 .label-ram {
   font-size: large;
 }
-
 .workspaces {
-	// padding: 6px 12px;
 }
-
 .workspaces button:hover {
-  // color: #D35D6E;
 }
-
-// worspace-button
 .wsb {
-  // color: #b0b4bc;
 	padding: 4px 8px;
 	border-top: 2px solid rgba(0,0,0,0);
 }
 .wsb-mine {
-  // color: #fff;
-  // background-color: $accent_color;
 	border-color: white;
 }
 .wsb-visible {
-  color: $accent_color;
-  background-color: #4e4e4e;
+	border-color: $accent_color;
 }
 .wsb-busy {
-  // color: $accent_color;
-	border-color: $accent_color;
+	border-color: rgba(255,255,255,0.5);
 }
