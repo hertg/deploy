@@ -1,3 +1,6 @@
+$accent_color: #D35D6E;
+// $accent_color: yellow;
+
 * {
   all: unset; //Unsets everything so you can style everything from scratch
 }
@@ -13,17 +16,28 @@
 }
 
 // Styles on classes (see eww.yuck for more information)
-.sidestuff {
+.left {
+	padding-left: 12px;
 }
 
-.sidestuff slider {
-  all: unset;
-  color: #ffd5cd;
+// .left slider {
+//   all: unset;
+//   color: #ffd5cd;
+// }
+
+.right {
+	padding-right: 12px;
+}
+
+.icontext {
+	margin-left: 12px;
+	padding: 4px 8px;
+	border-top: 2px solid $accent_color;
 }
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #D35D6E;
+  background-color: $accent_color;
   color: #000000;
   border-radius: 10px;
 }
@@ -38,7 +52,7 @@
 }
 .metric scale trough highlight {
   all: unset;
-  background-color: #D35D6E;
+  background-color: $accent_color;
   color: #000000;
   border-radius: 10px;
 }
@@ -60,22 +74,25 @@
 }
 
 .workspaces button:hover {
-  color: #D35D6E;
+  // color: #D35D6E;
 }
 
 // worspace-button
 .wsb {
   // color: #b0b4bc;
-	padding: 4px 6px;
+	padding: 4px 8px;
+	border-top: 2px solid rgba(0,0,0,0);
 }
 .wsb-mine {
-  color: #4e4e4e;
-  background-color: #ffd5ca;
+  // color: #fff;
+  // background-color: $accent_color;
+	border-color: white;
 }
 .wsb-visible {
-  color: #D35D6E;
+  color: $accent_color;
   background-color: #4e4e4e;
 }
 .wsb-busy {
-  color: #D35D6E;
+  // color: $accent_color;
+	border-color: $accent_color;
 }
