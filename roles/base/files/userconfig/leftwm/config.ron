@@ -46,6 +46,11 @@
         ( window_class: "threema-web", spawn_on_tag: 2 ),
         ( window_class: "signal", spawn_on_tag: 2 ),
         ( window_class: "soundux", spawn_on_tag: 2 ),
+        ( window_class: "spotify", spawn_on_tag: 4 ),
+        ( window_class: "java", window_title: "DBeaver ", spawn_on_tag: 8 ), // splashscreen
+        ( window_class: "DBeaver", spawn_on_tag: 8 ), // main application + dialogs
+        ( window_class: "org.remmina.Remmina", spawn_on_tag: 6 ),
+        ( window_class: "gimp-2.10", spawn_on_tag: 9 ),
     ],
     disable_current_tag_swap: true,
     disable_tile_drag: false,
