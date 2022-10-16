@@ -41,5 +41,8 @@ nnoremap <leader>qw :wq<CR>
 nnoremap <leader>ww :w<CR>
 nnoremap <leader>wa :wa<CR>
 
+" paste without losing the register
+xnoremap("<leader>p", "\"_dP")
+
 " terminal
 tnoremap <Esc> <C-\><C-n> " close terminal with Esc
