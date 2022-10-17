@@ -106,6 +106,7 @@ kvm: yes
 - ClamAV: `clamav`
 - Lynis: `lynis`
 - [Disable beep](https://bbs.archlinux.org/viewtopic.php?id=276754)
+- checkupdates: `pacman-contrib`
 
 ## Custom Roles
 ### Install with paru (AUR)
