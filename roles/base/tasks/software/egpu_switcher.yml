@@ -3,4 +3,4 @@
     name: paru
   vars:
     package:
-      - egpu-switcher-git
+      - egpu-switcher-bin

@@ -37,19 +37,29 @@
     ],
     window_rules: [
         ( window_title: "Picture-in-Picture", spawn_as_type: Normal ),
+
+        ( window_class: "com-sonicwall-NetExtender", spawn_on_tag: 1 ),
+
         ( window_class: "discord", spawn_on_tag: 2 ),
-        ( window_class: "Steam", spawn_on_tag: 5 ),
-        ( window_class: "code-oss", spawn_on_tag: 7 ),
-        ( window_class: "jetbrains-idea", window_title: "splash", spawn_floating: true, spawn_on_tag: 7 ),
-        ( window_class: "jetbrains-idea", spawn_on_tag: 7 ),
-        ( window_class: "Navigator", spawn_on_tag: 3 ),
         ( window_class: "threema-web", spawn_on_tag: 2 ),
         ( window_class: "signal", spawn_on_tag: 2 ),
         ( window_class: "soundux", spawn_on_tag: 2 ),
+
+        ( window_class: "Navigator", spawn_on_tag: 3 ),
+
         ( window_class: "spotify", spawn_on_tag: 4 ),
-        ( window_class: "java", window_title: "DBeaver ", spawn_on_tag: 8 ), // splashscreen
-        ( window_class: "DBeaver", spawn_on_tag: 8 ), // main application + dialogs
+
+        ( window_class: "Steam", spawn_on_tag: 5 ),
+
         ( window_class: "org.remmina.Remmina", spawn_on_tag: 6 ),
+
+        ( window_class: "code-oss", spawn_on_tag: 7 ),
+        ( window_class: "jetbrains-idea", window_title: "splash", spawn_floating: true, spawn_on_tag: 7 ),
+        ( window_class: "jetbrains-idea", spawn_on_tag: 7 ),
+
+        ( window_class: "java", window_title: "DBeaver ", spawn_on_tag: 8 ), // splashscreen
+        ( window_class: "DBeaver", spawn_on_tag: 8 ),
+
         ( window_class: "gimp-2.10", spawn_on_tag: 9 ),
     ],
     disable_current_tag_swap: true,
