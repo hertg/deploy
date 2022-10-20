@@ -107,6 +107,7 @@ kvm: yes
 - Lynis: `lynis`
 - [Disable beep](https://bbs.archlinux.org/viewtopic.php?id=276754)
 - checkupdates: `pacman-contrib`
+- boot splashscreen: `plymouth` (AUR)
 
 ## Custom Roles
 ### Install with paru (AUR)
