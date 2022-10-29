@@ -108,6 +108,9 @@ kvm: yes
 - [Disable beep](https://bbs.archlinux.org/viewtopic.php?id=276754)
 - checkupdates: `pacman-contrib`
 - boot splashscreen: `plymouth` (AUR)
+- flutter
+	- `flutter` (AUR)
+	- `android-studio` (AUR)
 
 ## Custom Roles
 ### Install with paru (AUR)

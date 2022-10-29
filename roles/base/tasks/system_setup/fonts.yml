@@ -1,12 +1,12 @@
 - name: system-setup | fonts | install fonts
   package:
-    name: 
+    name:
       - ttf-dejavu
+      - ttf-hack-nerd
 
 - name: system-setup | fonts | install fonts from AUR
   import_role:
     name: paru
   vars:
     package:
-      - nerd-fonts-hack 
       - ttf-apple-emoji

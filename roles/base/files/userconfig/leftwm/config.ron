@@ -41,6 +41,7 @@
         ( window_class: "com-sonicwall-NetExtender", spawn_on_tag: 1 ),
 
         ( window_class: "discord", spawn_on_tag: 2 ),
+        ( window_class: "webcord", spawn_on_tag: 2 ),
         ( window_class: "threema-web", spawn_on_tag: 2 ),
         ( window_class: "signal", spawn_on_tag: 2 ),
         ( window_class: "soundux", spawn_on_tag: 2 ),
