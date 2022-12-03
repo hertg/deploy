@@ -41,6 +41,10 @@ nnoremap <leader>qw :wq<CR>
 nnoremap <leader>ww :w<CR>
 nnoremap <leader>wa :wa<CR>
 
+" make ctrl-d and ctrl-u center the cursor
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " paste without losing the register
 xnoremap("<leader>p", "\"_dP")
 

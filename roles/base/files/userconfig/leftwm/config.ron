@@ -51,6 +51,7 @@
         ( window_class: "spotify", spawn_on_tag: 4 ),
 
         ( window_class: "Steam", spawn_on_tag: 5 ),
+        ( window_title: "Steam", spawn_on_tag: 5 ),
 
         ( window_class: "org.remmina.Remmina", spawn_on_tag: 6 ),
 
