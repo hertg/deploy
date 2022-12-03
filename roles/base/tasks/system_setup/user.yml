@@ -70,6 +70,7 @@
     - { src: 'llpp.conf', dest: '.config/'}
     - { src: 'starship.toml', dest: '.config/'}
     - { src: 'fontconfig', dest: '.config/'}
+    - { src: 'gazatu.xyz', dest: '.config/'}
     - { src: 'gtk-3.0', dest: '.config/'}
     - { src: 'leftwm', dest: '.config/'}
     - { src: 'macchina', dest: '.config/'}

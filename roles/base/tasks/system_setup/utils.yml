@@ -27,6 +27,13 @@
       - playerctl # control media playback
       - solaar # logitech device manager
 
+- name: system-setup | utils | install emoji picker
+  import_role:
+    name: paru
+  vars:
+    package:
+      - x11-emoji-picker-git
+
 - name: system-setup | utils | install fetch (macchina)
   import_role:
     name: paru

@@ -73,6 +73,7 @@
     keybind: [
         (command: Execute, value: "rofi -show drun", modifier: ["modkey"], key: "p"),
         (command: Execute, value: "rofi -show run", modifier: ["modkey", "Shift"], key: "p"),
+        (command: Execute, value: "emoji-picker", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "alacritty", modifier: ["modkey", "Shift"], key: "Return"),
         (command: CloseWindow, value: "", modifier: ["modkey", "Shift"], key: "c"),
         (command: SoftReload, value: "", modifier: ["modkey", "Shift"], key: "r"),
