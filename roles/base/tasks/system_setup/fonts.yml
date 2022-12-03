@@ -3,6 +3,7 @@
     name:
       - ttf-dejavu
       - ttf-hack-nerd
+      - opendesktop-fonts # chinese symbols
 
 - name: system-setup | fonts | install fonts from AUR
   import_role:
