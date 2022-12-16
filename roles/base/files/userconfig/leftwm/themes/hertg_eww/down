@@ -14,5 +14,6 @@ pkill picom
 pkill polybar
 pkill conky
 if [ -x "$(command -v eww)" ]; then
+	eww close-all
   eww kill
 fi
