@@ -12,6 +12,7 @@
       - unzip
       - lzip
       - dkms # dynamic kernel modules
+      - lsof
 
 - name: system-setup | utils | install git, lsd, openssh, man, neovim, etc
   package:

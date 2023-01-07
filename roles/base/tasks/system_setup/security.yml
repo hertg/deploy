@@ -1,4 +1,4 @@
-- name: software | utils | basic system utilities
+- name: system-setup | security | basic system utilities
   package:
     name:
       - libsecret
@@ -7,11 +7,17 @@
       - gpa # graphical GPG key manager
       - libfido2
 
-- name: software | security | check if ufw is enabled
+- name: system-setup | security | check if ufw is enabled
   command: ufw status
   register: ufw_status
   changed_when: false
 
-- name: software | security | enable ufw
+- name: system-setup | security | enable ufw
   when: "'inactive' in ufw_status.stdout"
   command: ufw enable
+
+- name: system-setup | security | set coredump mode for setuid (CVE-2022-4415)
+  ansible.posix.sysctl:
+    name: fs.suid_dumpable
+    value: 0
+    state: present

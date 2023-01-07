@@ -23,7 +23,7 @@ jdk: yes
 kvm: yes
 netextender: yes
 nodejs: yes
-obs: yes
+obs: no
 odbc: yes
 remmina: yes
 sbt: yes
