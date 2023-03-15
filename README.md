@@ -111,6 +111,17 @@ kvm: yes
 - flutter
 	- `flutter` (AUR)
 	- `android-studio` (AUR)
+- Apparmor `apparmor`
+	- grub config
+	  ```
+   	GRUB_CMDLINE_LINUX="cryptdevice=<disk> lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
+  	```
+	- generate
+		```
+		grub-mkconfig -o /boot/grub/grub.cfg
+		```
+	- reboot
+- Reflector `reflector`
 
 ## Custom Roles
 ### Install with paru (AUR)
