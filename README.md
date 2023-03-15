@@ -113,13 +113,13 @@ kvm: yes
 	- `android-studio` (AUR)
 - Apparmor `apparmor`
 	- grub config
-	  ```
-   	GRUB_CMDLINE_LINUX="cryptdevice=<disk> lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
-  	```
+    ```text
+    GRUB_CMDLINE_LINUX="cryptdevice=<disk> lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
+    ```
 	- generate
-		```
-		grub-mkconfig -o /boot/grub/grub.cfg
-		```
+    ```bash
+    grub-mkconfig -o /boot/grub/grub.cfg
+    ```
 	- reboot
 - Reflector `reflector`
 
