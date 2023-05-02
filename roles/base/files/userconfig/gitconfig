@@ -1,8 +1,8 @@
 [user]
 	email = 3533648+hertg@users.noreply.github.com
 	name = hertg
-[includeIf "gitdir:/mnt/data/repositories"]
-    path = .gitconfig_informaticon
+[includeIf "gitdir:/mnt/data/repositories/"]
+	path = .gitconfig_informaticon
 [credential]
 	helper = store
 [pull]

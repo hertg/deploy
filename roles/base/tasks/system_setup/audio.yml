@@ -1,7 +1,7 @@
 - name: system-setup | audio | install packages
   package:
     name:
-      - alsa
+      - alsa-card-profiles
       - alsa-utils
       - pulseaudio
       - pavucontrol
