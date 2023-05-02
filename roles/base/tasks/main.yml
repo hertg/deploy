@@ -90,8 +90,8 @@
   - import_tasks: software/android.yml
     when: android is defined and android == true
   
-  - import_tasks: software/netextender.yml
-    when: netextender is defined and netextender == true
+  # - import_tasks: software/netextender.yml
+  #   when: netextender is defined and netextender == true
 
   - import_tasks: software/remmina.yml
     when: remmina is defined and remmina == true

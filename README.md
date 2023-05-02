@@ -112,16 +112,32 @@ kvm: yes
 	- `flutter` (AUR)
 	- `android-studio` (AUR)
 - Apparmor `apparmor`
-	- grub config
-    ```text
-    GRUB_CMDLINE_LINUX="cryptdevice=<disk> lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
-    ```
-	- generate
-    ```bash
-    grub-mkconfig -o /boot/grub/grub.cfg
-    ```
-	- reboot
+	grub config
+  ```text
+  GRUB_CMDLINE_LINUX="cryptdevice=<disk> lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
+  ```
+	generate
+  ```bash
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+	reboot
 - Reflector `reflector`
+- Audit Framework (`audit`)
+	kernel parameter
+	```text
+	audit=1
+	```
+	generate
+  ```bash
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+	install and enable audit
+	```
+	sudo pacman -S audit
+	sudo systemctl enable --now auditd
+	```
+	[enable desktop notifications](https://wiki.archlinux.org/title/AppArmor#Get_desktop_notification_on_DENIED_actions)
+	reboot
 
 ## Custom Roles
 ### Install with paru (AUR)
