@@ -9,4 +9,4 @@
     name: paru
   vars:
     package:
-      - watchman
+      - watchman-bin
