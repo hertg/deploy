@@ -21,3 +21,9 @@
     name: fs.suid_dumpable
     value: 0
     state: present
+
+- name: system-setup | security | disable unprivileged user namespaces
+  ansible.posix.sysctl:
+    name: kernel.unprivileged_userns_clone
+    value: 0
+    state: present
