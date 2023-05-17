@@ -10,3 +10,10 @@
     package:
       - sweet-gtk-theme-dark
       - sweet-folders-icons-git
+
+- name: system-setup | themes | catppuccin
+  import_role:
+    name: paru
+  vars:
+    package:
+      - catppuccin-gtk-theme-mocha
