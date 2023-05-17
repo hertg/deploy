@@ -1,7 +1,14 @@
-- name: software | vscode | install code
-  package:
-    name:
-      - code
+# - name: software | vscode | install code
+#   package:
+#     name:
+#       - code
+
+- name: software | vscodium | install vscodium
+  import_role:
+    name: paru
+  vars:
+    package:
+      - vscodium-bin
 
 # todo: swapescape
 # -> in settings, change keyboard.dispatch to "keyCode" for capslock/escape swap to work

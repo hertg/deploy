@@ -22,26 +22,6 @@
         "MainAndDeck",
         "Monocle",
     ],
-    layout_definitions: [
-        // single column
-        (name: "EvenHorizontal", column_type: Stack, stack_split: Vertical),
-        (name: "EvenVertical", column_type: Stack, stack_split: Horizontal),
-        (name: "Monocle", column_type: Stack, stack_split: None, main_split: None),
-        (name: "Grid", column_type: Stack, stack_split: Grid),
-
-        // two column
-        (name: "MainAndVertStack", column_type: MainAndStack, stack_split: Horizontal),
-        (name: "MainAndHorizontalStack", column_type: MainAndStack, stack_split: Vertical),
-        (name: "RightMainAndVertStack", column_type: MainAndStack, stack_split: Horizontal, flipped: Vertical),
-        (name: "Fibonacci", column_type: MainAndStack, stack_split: Fibonacci),
-        (name: "Dwindle", column_type: MainAndStack, stack_split: Dwindle),
-        (name: "MainAndDeck", column_type: MainAndStack, stack_split: None, main_split: None),
-
-        // three column
-        (name: "CenterMain", column_type: CenterMain, stack_split: Horizontal),
-        (name: "CenterMainBalanced", column_type: CenterMain, stack_split: Dwindle),
-        (name: "CenterMainFluid", column_type: CenterMain, stack_split: Horizontal, reserve_column_space: Reserve, balance_stacks: false),
-    ],
     layout_mode: Tag,
     insert_behavior: Bottom,
     scratchpad: [
@@ -79,7 +59,7 @@
     disable_current_tag_swap: true,
     disable_tile_drag: false,
     disable_window_snap: true,
-    focus_behaviour: ClickTo,
+    focus_behaviour: Sloppy,
     focus_new_windows: true,
     sloppy_mouse_follows_focus: true,
     keybind: [
@@ -121,8 +101,8 @@
         (command: MoveToTag, value: "7", modifier: ["modkey", "Shift"], key: "7"),
         (command: MoveToTag, value: "8", modifier: ["modkey", "Shift"], key: "8"),
         (command: MoveToTag, value: "9", modifier: ["modkey", "Shift"], key: "9"),
-        (command: IncreaseMainSize, value: "", modifier: ["modkey"], key: "l"),
-        (command: DecreaseMainSize, value: "", modifier: ["modkey"], key: "h"),
+        (command: IncreaseMainSize, value: "5", modifier: ["modkey"], key: "l"),
+        (command: DecreaseMainSize, value: "5", modifier: ["modkey"], key: "h"),
         (command: IncreaseMainCount, value: "", modifier: ["modkey"], key: "i"),
         (command: DecreaseMainCount, value: "", modifier: ["modkey"], key: "d"),
         (command: RotateTag, value: "", modifier: ["modkey"], key: "r"),
