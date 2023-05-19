@@ -1,4 +1,6 @@
 $accent_color: #D35D6E;
+$yellow: #FFFD98;
+$mint: #59C9A5;
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -8,9 +10,9 @@ $accent_color: #D35D6E;
 .bar0 {
   background-color: #000000;
 	background-color: rgba(0,0,0,0.3);
-  color: #eeeeee;
+  color: #fff;
 	font-family: 'monospace', 'sans-serif';
-	font-size: 18px;
+	font-size: 16px;
 }
 
 // Styles on classes (see eww.yuck for more information)
@@ -23,8 +25,11 @@ $accent_color: #D35D6E;
 .icontext {
 	margin-left: 12px;
 	padding: 4px 8px;
-	border-top: 2px solid $accent_color;
+	// border-top: 2px solid $accent_color;
 }
+// .icontext .icon {
+// 	color: $accent_color;
+// }
 .metric scale trough highlight {
   all: unset;
   background-color: $accent_color;
@@ -58,20 +63,24 @@ $accent_color: #D35D6E;
 .label-ram {
   font-size: large;
 }
-.workspaces {
-}
-.workspaces button:hover {
-}
+
+// worksapces
 .wsb {
-	padding: 8px 12px;
-	border-top: 2px solid rgba(0,0,0,0);
+	color: rgba(255,255,255,0.33)
 }
 .wsb-mine {
-	border-color: white;
+	color: white;
 }
 .wsb-visible {
-	border-color: $accent_color;
+	color: $yellow;
+	// border-top: 2px solid $accent_color;
 }
 .wsb-busy {
-	border-color: rgba(255,255,255,0.5);
+	color: $accent_color;
+}
+.wsb button {
+	padding: 8px 10px;
+}
+.wsb button:hover {
+	color: white;
 }

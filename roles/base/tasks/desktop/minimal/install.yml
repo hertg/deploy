@@ -82,3 +82,5 @@
   vars:
     package:
       - polybar
+
+# todo: eww-git / import gpg keys

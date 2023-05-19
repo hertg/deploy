@@ -8,21 +8,51 @@
 // For info about configuration please visit https://github.com/leftwm/leftwm/wiki
 
 #![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
 (
     modkey: "Mod4",
     mousekey: "Mod4",
-    workspaces: [],
+    layout_mode: Tag,
+    workspaces: [
+        // ( output: "DisplayPort-1", y: 0, x: 0, height: 1440, width: 5120, layouts: ["MainAndVertStack", "CenterMain"] ),
+        // ( output: "DisplayPort-1", y: 0, x: 0, height: 1440, width: 2560 ),
+        // ( output: "DisplayPort-1", y: 0, x: 2560, height: 1440, width: 2560 ),
+    ],
     //tags: ["", "", "", "", "調", "", "", "", ""],
     tags: ["home", "chat", "surf", "media", "game", "remote", "code", "db", "graphics"],
     max_window_width: 2560,
     layouts: [
         "CenterMainFluid",
+        "RightMainAndVertStack",
+        "RightMainMulti",
         "CenterMain",
         "Fibonacci",
         "MainAndDeck",
         "Monocle",
     ],
-    layout_mode: Tag,
+    layout_definitions: [
+        (
+            name: "RightMainMulti",
+            flip: None,
+            rotate: North,
+            reserve: Reserve,
+            columns: (
+                flip: None,
+                rotate: South,
+                main: (count: 2, size: 0.6, flip: None, rotate: North, split: Some(Vertical)),
+                stack: (flip: None, rotate: North, split: Some(Horizontal)),
+                second_stack: None,
+            )
+        ),
+    ],
+    //layouts: [
+    //    CenterMainFluid,
+    //    CenterMain,
+    //    Fibonacci,
+    //    MainAndDeck,
+    //    Monocle,
+    //],
+    // layout_definitions: [],
     insert_behavior: Bottom,
     scratchpad: [
         (name: "Alacritty", value: "alacritty", x: None, y: None, height: None, width: None),
