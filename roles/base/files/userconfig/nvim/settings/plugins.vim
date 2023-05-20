@@ -25,6 +25,7 @@ Plug 'junegunn/limelight.vim' 										" Hyperfocus on a range
 Plug 'jiangmiao/auto-pairs' 											" Insert brackets in pairs
 
 Plug 'morhetz/gruvbox' 														" Gruvbox theme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' } 		" Catppuccin theme
 
 call plug#end()
 

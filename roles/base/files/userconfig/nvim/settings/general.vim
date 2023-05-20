@@ -23,6 +23,9 @@ set smartcase           " no automatic ignore-case switch
 set hlsearch            " highlight search results
 set incsearch           " highlight as you type
 
-
 "" Misc
 set encoding=utf-8      " Use UTF-8 Encoding
+
+"" Theme
+colorscheme catppuccin
+vim.cmd.colorscheme "catpuccin"

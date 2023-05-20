@@ -142,6 +142,8 @@
         // (command: SetLayout, value: "CenterMainBalanced", modifier: ["modkey"], key: "m"),
         // (command: SetLayout, value: "MainAndVertStack", modifier: ["modkey"], key: "t"),
         (command: ToggleFullScreen, value: "", modifier: ["modkey"], key: "f"),
+        (command: SetMarginMultiplier, value: "0.0", modifier: ["modkey", "Shift"], key: "n"),
+        (command: SetMarginMultiplier, value: "1.0", modifier: ["modkey"], key: "n"),
     ],
     state_path: None,
 )
