@@ -1,19 +1,9 @@
 (defwidget bar []
   (centerbox :orientation "h"
     (left)
-    (workspaces)
+    (middle)
     (right)))
 
-(defwidget left []
-  (box :class "left"
-       :orientation "h"
-       :space-evenly false
-       :halign "start"
-    (icontext :label "${time_poll}" :icon "")
-    (current_tag)
-    (current_layout)
-  )
-)
 
 (defwidget current_tag []
   (icontext :label "${jq(wmstate, '.workspaces[] | select(.id == 1) | .tags[] | select(.mine == true)').name}"
@@ -31,7 +21,6 @@
          :visible true
       (box :space-evenly false
         (for tag in '${wmstate.workspaces[0].tags}'
-
           (box
             :class {tag.mine ? "wsb wsb-mine" :
                     tag.visible ? "wsb wsb-visible" :
@@ -39,14 +28,26 @@
                     tag.busy ? "wsb wsb-busy" : "wsb"}
             (button
               :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
-              {tag.name})
+              {tag.mine ? "" : tag.visible ? "" :  ""})
           )
+
+          ;(box
+          ;  :class {tag.mine ? "wsb wsb-mine" :
+          ;          tag.visible ? "wsb wsb-visible" :
+          ;          tag.urgent ? "wsb wsb-urgent" :
+          ;          tag.busy ? "wsb wsb-busy" : "wsb"}
+          ;  (button
+          ;    :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
+          ;    {tag.busy ? tag.name : "•"})
+          ;)
+          
           ; (box
           ;   :class {tag.mine ? "ind ind-mine" :
           ;           tag.visible ? "ind ind-visible" :
           ;           tag.urgent ? "ind ind-urgent" :
           ;           tag.busy ? "ind ind-busy" : "ind"}
           ;   "•")
+
           ; (box
           ;   :class {tag.mine ? "wsb wsb-mine" :
           ;           tag.visible ? "wsb wsb-visible" :
@@ -60,20 +61,38 @@
           ; )
         ))))
 
+(defwidget left []
+  (box :class "left"
+       :orientation "h"
+       :space-evenly false
+       :halign "start"
+    (workspaces)
+  )
+)
+
+(defwidget middle []
+    (box :class "middle" :orientation "h" :space-evenly false :halign "center"
+        (current_tag)
+        (current_layout)
+    )
+)
+
 (defwidget right []
   (box :class "right" :orientation "h" :space-evenly false :halign "end"
     ; (music)
-    (metric :label ""
-            :value '${EWW_RAM.used_mem_perc}'
-            :onchange "")
-    (metric :label "󰋊"
-            :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
-            :onchange "")
+    ;(metric :label ""
+    ;        :value '${EWW_RAM.used_mem_perc}'
+    ;        :onchange "")
+    ;(metric :label "󰋊"
+    ;        :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+    ;        :onchange "")
     (icontext :label "${updates_poll}" :icon "")
     ; (icontext :label "${round(EWW_CPU.avg, 0)}%" :icon "﬙")
     ; (icontext :label "${round(EWW_RAM.used_mem_perc, 0)}%" :icon "")
     (icontext :label "${volume_poll}%" :icon " ")
-    (icontext :label "${date_poll}" :icon "")))
+    (icontext :label "${date_poll}" :icon "")
+    (icontext :label "${time_poll}" :icon "")
+  ))
 
 (defwidget music []
   (box :class "music"

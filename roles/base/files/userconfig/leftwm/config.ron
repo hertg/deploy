@@ -18,8 +18,10 @@
         // ( output: "DisplayPort-1", y: 0, x: 0, height: 1440, width: 2560 ),
         // ( output: "DisplayPort-1", y: 0, x: 2560, height: 1440, width: 2560 ),
     ],
-    //tags: ["", "", "", "", "調", "", "", "", ""],
     tags: ["home", "chat", "surf", "media", "game", "remote", "code", "db", "graphics"],
+    //tags: ["󰋜", "󰭹", "󰈹", "󰎈", "󰓓", "󰒋", "󰊢", "󰆼", "󱇣"],
+    // 󰎆 󰟒 󰅡 
+    // 󱉺 󰎄 󰴜 󰋌 󱃖 󰾟 󰸫 
     max_window_width: 2560,
     layouts: [
         "CenterMainFluid",
@@ -71,9 +73,12 @@
         ( window_class: "Navigator", spawn_on_tag: 3 ),
 
         ( window_class: "spotify", spawn_on_tag: 4 ),
+        ( window_title: "Spotify", spawn_on_tag: 4 ),
 
-        ( window_class: "Steam", spawn_on_tag: 5 ),
-        ( window_title: "Steam", spawn_on_tag: 5 ),
+        ( window_class: "steam", spawn_on_tag: 5 ),
+        ( window_class: "steam", window_title: "Sign in.*", spawn_on_tag: 5, spawn_floating: true ),
+//        ( window_class: "steam", window_title: "Friends List.*", spawn_on_tag: 5, spawn_floating: true ),
+        ( window_class: "steam", window_title: "Shutdown.*", spawn_on_tag: 5, spawn_floating: true ),
 
         ( window_class: "org.remmina.Remmina", spawn_on_tag: 6 ),
 

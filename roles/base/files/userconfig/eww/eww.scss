@@ -2,6 +2,9 @@ $accent_color: #D35D6E;
 $yellow: #FFFD98;
 $mint: #59C9A5;
 
+$white: rgba(255,255,255,0.9);
+$white_weak: rgba(255,255,255,0.3); 
+
 * {
   all: unset; //Unsets everything so you can style everything from scratch
 }
@@ -10,7 +13,7 @@ $mint: #59C9A5;
 .bar0 {
   background-color: #000000;
 	background-color: rgba(0,0,0,0.3);
-  color: #fff;
+    color: #fff;
 	font-family: 'monospace', 'sans-serif';
 	font-size: 16px;
 }
@@ -66,21 +69,17 @@ $mint: #59C9A5;
 
 // worksapces
 .wsb {
-	color: rgba(255,255,255,0.33)
+	color: $white_weak;
+    min-width: 22px;
+    min-height: 22px;
+    margin: 2px 4px;
 }
 .wsb-mine {
-	color: white;
+    color: $white;
 }
 .wsb-visible {
-	color: $yellow;
-	// border-top: 2px solid $accent_color;
+    color: $white;
 }
 .wsb-busy {
-	color: $accent_color;
-}
-.wsb button {
-	padding: 8px 10px;
-}
-.wsb button:hover {
-	color: white;
+    color: $white;
 }
