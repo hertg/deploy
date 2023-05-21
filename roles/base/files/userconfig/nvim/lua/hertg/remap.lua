@@ -60,3 +60,38 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>") -- close terminal with Esc
 
+-- hop
+-- vim.keymap.set("n", "<leader>ha", ":HopAnywhere<CR>")
+-- vim.keymap.set("n", "<leader>hw", ":HopWord<CR>")
+-- vim.keymap.set("n", "<leader>hp", ":HopPattern<CR>")
+-- vim.keymap.set("n", "<leader>hc1", ":HopChar1<CR>")
+-- vim.keymap.set("n", "<leader>hc2", ":HopChar2<CR>")
+
+local hop = require('hop')
+local directions = require('hop.hint').HintDirection
+vim.keymap.set('', 'f', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+end, {remap=true})
+vim.keymap.set('', 'F', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+end, {remap=true})
+vim.keymap.set('', 't', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+end, {remap=true})
+vim.keymap.set('', 'T', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+end, {remap=true})
+
+vim.keymap.set('n', '<leader>ha', function()
+    hop.hint_anywhere()
+end)
+vim.keymap.set('n', '<leader>hw', function()
+    hop.hint_words()
+end)
+vim.keymap.set('n', '<leader>hp', function()
+    hop.hint_patterns()
+end)
+vim.keymap.set('n', '<leader>hc', function()
+    hop.hint_char2()
+end)
+

@@ -50,11 +50,17 @@
     package:
       - nvim-packer-git
 
-- name: system-setup | utils | install plugins for neovim (if nvim configs have changed)
+- name: system-setup | utils | setup packer and install/update plugins
   when: userconfig_stat.changed and userconfig_stat.results | selectattr("item.src", "equalto", "nvim") | map(attribute="changed")
   become: yes
   become_user: "{{ config_username }}"
-  shell: 'nvim +PackerSync +qa --headless'
+  shell: nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+#- name: system-setup | utils | install plugins for neovim (if nvim configs have changed)
+#  when: userconfig_stat.changed and userconfig_stat.results | selectattr("item.src", "equalto", "nvim") | map(attribute="changed")
+#  become: yes
+#  become_user: "{{ config_username }}"
+#  shell: 'nvim +PackerSync +qa --headless'
 
 #- name: system-setup | utils | check if plugin manager for neovim is already installed
 #  become: yes
