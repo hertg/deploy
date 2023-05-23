@@ -24,3 +24,17 @@
     path: /usr/sbin/pppd
     group: ppp
     mode: 04750 # -rwsr-x---
+
+# https://wiki.archlinux.org/title/Ppp#pppd_cannot_load_kernel_module_ppp_generic
+- name: software | netextender | load ppp_generic kernel module
+  register: ppp_generic
+  copy:
+    dest: /etc/modprobe.d/ppp.conf
+    content: |
+      alias char-major-108 ppp_generic
+
+- name: software | netextender | notice
+  when: ppp_generic.changed
+  debug:
+    msg: 'a restart may be required to connect via netextender'
+
