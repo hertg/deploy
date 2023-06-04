@@ -111,6 +111,11 @@ kvm: yes
 - flutter
 	- `flutter` (AUR)
 	- `android-studio` (AUR)
+- dust (`du` alternative)
+- ripgrep
+- ncspot (spotify tui)
+- wiki-tui (wikipedia tui)
+- Obsidian
 - Apparmor `apparmor`
 	grub config
   ```text
