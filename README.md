@@ -117,6 +117,7 @@ kvm: yes
 - wiki-tui (wikipedia tui)
 - Obsidian
 - Fluent Reader 
+- `paccache` + hook ([`paccache -rk2 -ruk0`](https://www.reddit.com/r/archlinux/comments/6s9mbp/comment/dlb4i70/))
 - Apparmor `apparmor`
 	grub config
   ```text
