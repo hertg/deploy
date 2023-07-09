@@ -116,6 +116,7 @@ kvm: yes
 - ncspot (spotify tui)
 - wiki-tui (wikipedia tui)
 - Obsidian
+- Fluent Reader 
 - Apparmor `apparmor`
 	grub config
   ```text
