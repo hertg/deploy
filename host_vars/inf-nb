@@ -27,7 +27,6 @@ obs: no
 odbc: yes
 remmina: yes
 sbt: yes
-spotify: yes
 vscode: yes
 egpu_switcher: yes
 teamviewer: yes

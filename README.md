@@ -144,6 +144,8 @@ kvm: yes
 	```
 	[enable desktop notifications](https://wiki.archlinux.org/title/AppArmor#Get_desktop_notification_on_DENIED_actions)
 	reboot
+- GTK Theme
+  https://github.com/catppuccin/gtk#for-gtk-40-users
 
 ## Custom Roles
 ### Install with paru (AUR)
