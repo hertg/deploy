@@ -11,3 +11,4 @@
   vars:
     package:
       - ttf-apple-emoji
+      - ttf-b612
