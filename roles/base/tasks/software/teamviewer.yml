@@ -11,10 +11,10 @@
     enabled: yes
     state: started
 
-- name: software | teamviewer | install teamviewer
-  when: remmina is defined and remmina == true
-  import_role:
-    name: paru
-  vars:
-    package:
-      - remmina-plugin-teamviewer
+#- name: software | teamviewer | install teamviewer
+#  when: remmina is defined and remmina == true
+#  import_role:
+#    name: paru
+#  vars:
+#    package:
+#      - remmina-plugin-teamviewer
