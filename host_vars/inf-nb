@@ -22,7 +22,7 @@ intellij: yes
 jdk: yes
 kvm: yes
 netextender: yes
-nodejs: yes
+nodejs: no
 obs: no
 odbc: yes
 remmina: yes
