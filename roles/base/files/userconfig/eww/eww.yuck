@@ -66,14 +66,14 @@
        :orientation "h"
        :space-evenly false
        :halign "start"
-    (workspaces)
+    (current_tag)
+    (current_layout)
   )
 )
 
 (defwidget middle []
     (box :class "middle" :orientation "h" :space-evenly false :halign "center"
-        (current_tag)
-        (current_layout)
+        (workspaces)
     )
 )
 
@@ -86,9 +86,13 @@
     ;(metric :label "󰋊"
     ;        :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
     ;        :onchange "")
+    (icontext :label "${round(EWW_NET.enp39s0.NET_DOWN / 8 / 1024, 0)} kb/s" :icon "󰦗")
+    (icontext :label "${round(EWW_NET.enp39s0.NET_UP / 8 / 1024, 0)} kb/s" :icon "󰦗")
+
     (icontext :label "${updates_poll}" :icon "󰚰")
     ; (icontext :label "${round(EWW_CPU.avg, 0)}%" :icon "﬙")
     ; (icontext :label "${round(EWW_RAM.used_mem_perc, 0)}%" :icon "")
+   
     (icontext :label "${volume_poll}%" :icon " ")
     (icontext :label "${date_poll}" :icon "󰸗")
     (icontext :label "${time_poll}" :icon "󰅐")
