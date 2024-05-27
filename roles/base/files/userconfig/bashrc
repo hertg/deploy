@@ -31,6 +31,10 @@ alias discord='discord --no-sandbox'
 # usage: 'mailenc <recipient-pubkey-file> <message-file>'
 alias mailenc='gpg --encrypt --sign --armor --recipient-file'
 
+# nvm
+export NVM_SYMLINK_CURRENT=true
+[ -d "/usr/share/nvm" ] && source /usr/share/nvm/init-nvm.sh
+
 # exports
 export EDITOR=vim
 export VISUAL=vim

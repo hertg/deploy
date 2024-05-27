@@ -19,11 +19,9 @@
       - numlockx
 
 - name: desktop | minimal | install compositor (picom)
-  import_role:
-    name: paru
-  vars:
-    package:
-      - picom-git
+  package:
+    name:
+      - picom
 
 - name: desktop | minimal | install display-manager (ly)
   when: dm is defined and dm == 'ly'

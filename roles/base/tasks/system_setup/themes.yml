@@ -3,13 +3,13 @@
     name: 
       - papirus-icon-theme
 
-- name: system-setup | themes | sweet
-  import_role:
-    name: paru
-  vars:
-    package:
-      - sweet-gtk-theme-dark
-      - sweet-folders-icons-git
+#- name: system-setup | themes | sweet
+#  import_role:
+#    name: paru
+#  vars:
+#    package:
+#      - sweet-gtk-theme-dark
+#      - sweet-folders-icons-git
 
 - name: system-setup | themes | catppuccin
   import_role:

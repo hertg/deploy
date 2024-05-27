@@ -26,7 +26,6 @@
       - ueberzug # console image preview
       - light # control screen backlight
       - playerctl # control media playback
-      - solaar # logitech device manager
 
 - name: system-setup | utils | install emoji picker
   import_role:
