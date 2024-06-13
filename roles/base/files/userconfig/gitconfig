@@ -2,8 +2,6 @@
     email = michael@hertig.dev
     name = Michael Hertig
     signingkey = 0xD43B06EE133426AD
-[push]
-    gpgsign = true
 [tag]
     gpgsign = true
 [commit]
