@@ -13,9 +13,9 @@ alias cat="bat -p"
 
 alias ga='git add .'
 alias gs='git status'
-alias gm='git commit -S -m'
-alias gt='git tag -s'
-alias gam="git add . && git commit -S -m"
+alias gm='git commit -m'
+alias gt='git tag'
+alias gam="git add . && git commit -m"
 alias gp='git push origin $(git branch --show-current)'
 
 alias grep='grep --color'
